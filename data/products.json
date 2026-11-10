@@ -1,0 +1,101 @@
+[
+  {
+    "id": "pousami-gold",
+    "slug": "pousami-gold",
+    "name": "Pousami Gold Paddy Seed",
+    "category": "Paddy Seeds",
+    "shortDescription": "Pousami Gold Paddy Seed from SRABANI SEED FARM.",
+    "description": "Pousami Gold is a trusted paddy seed variety cultivated and processed under strict quality controls at SRABANI SEED FARM in Sabang, West Bengal. Selected for strong vegetative vigour and regional climate compatibility, this seed lot is thoroughly cleaned, graded, and inspected to ensure high physical purity and dependable field performance.",
+    "features": [
+      "High physical purity with thorough seed grading",
+      "Selected for strong germination and seedling vigour",
+      "Adapted for regional agro-climatic conditions in West Bengal",
+      "Directly distributed by SRABANI SEED FARM, Sabang"
+    ],
+    "specifications": {
+      "seedType": "High-Yielding Paddy Seed",
+      "packaging": "Standard farm-sealed bags",
+      "availability": "Available for current sowing season"
+    },
+    "images": [
+      {
+        "src": "assets/images/products/pousami-gold-1.jpg",
+        "alt": "Pousami Gold Paddy Seed packaging and grain sample at SRABANI SEED FARM"
+      },
+      {
+        "src": "assets/images/products/pousami-gold-2.jpg",
+        "alt": "Pousami Gold Paddy Seed close-up of graded golden grains"
+      },
+      {
+        "src": "assets/images/products/pousami-gold-3.jpg",
+        "alt": "Pousami Gold Paddy Seed field emergence and healthy tillers"
+      }
+    ]
+  },
+  {
+    "id": "gobinda-bhog",
+    "slug": "gobinda-bhog",
+    "name": "Gobinda Bhog Paddy Seed",
+    "category": "Paddy Seeds",
+    "shortDescription": "Gobinda Bhog Paddy Seed from SRABANI SEED FARM.",
+    "description": "Gobinda Bhog is a famous traditional short-grain aromatic rice variety native to West Bengal. Valued for its rich natural aroma and delicate culinary appeal in festive bhog and payesh preparations, SRABANI SEED FARM prepares Gobinda Bhog seeds with rigorous care to retain varietal purity and sound grain health.",
+    "features": [
+      "Authentic heritage aromatic short-grain variety",
+      "Preserved for true-to-type aroma and cooking quality",
+      "Graded and screened to remove chaff and inert matter",
+      "Carefully dried to optimal moisture for maximum shelf stability"
+    ],
+    "specifications": {
+      "seedType": "Traditional Aromatic Short-Grain Paddy Seed",
+      "packaging": "Moisture-resistant farm-sealed bags",
+      "availability": "Seasonal availability — contact farm directly"
+    },
+    "images": [
+      {
+        "src": "assets/images/products/gobinda-bhog-1.jpg",
+        "alt": "Gobinda Bhog Paddy Seed authentic aromatic grain display"
+      },
+      {
+        "src": "assets/images/products/gobinda-bhog-2.jpg",
+        "alt": "Gobinda Bhog Paddy Seed inspection and purity check"
+      },
+      {
+        "src": "assets/images/products/gobinda-bhog-3.jpg",
+        "alt": "Gobinda Bhog traditional paddy panicles ready for harvest"
+      }
+    ]
+  },
+  {
+    "id": "badsha-bhog",
+    "slug": "badsha-bhog",
+    "name": "Badsha Bhog Paddy Seed",
+    "category": "Paddy Seeds",
+    "shortDescription": "Badsha Bhog Paddy Seed from SRABANI SEED FARM.",
+    "description": "Badsha Bhog is a celebrated traditional scented paddy variety cultivated across Bengal. Recognized for its sweet floral scent and slender-medium grain texture, SRABANI SEED FARM provides genuine Badsha Bhog seeds that undergo systematic grading and seed lot monitoring to support farmers cultivating premium fragrant rice.",
+    "features": [
+      "Prized Bengal heritage scented rice variety",
+      "Distinct sweet fragrance and slender grain structure",
+      "Strict grading ensures uniform seed density and size",
+      "Direct from Sabang, Paschim Medinipur distribution"
+    ],
+    "specifications": {
+      "seedType": "Heritage Scented Paddy Seed",
+      "packaging": "Standard agricultural packaging",
+      "availability": "Seasonal availability — contact farm directly"
+    },
+    "images": [
+      {
+        "src": "assets/images/products/badsha-bhog-1.jpg",
+        "alt": "Badsha Bhog Paddy Seed premium scented seed lot"
+      },
+      {
+        "src": "assets/images/products/badsha-bhog-2.jpg",
+        "alt": "Badsha Bhog Paddy Seed cleaned golden grains"
+      },
+      {
+        "src": "assets/images/products/badsha-bhog-3.jpg",
+        "alt": "Badsha Bhog Paddy field cultivation at SRABANI SEED FARM"
+      }
+    ]
+  }
+]

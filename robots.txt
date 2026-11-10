@@ -1,0 +1,6 @@
+# robots.txt for SRABANI SEED FARM
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://srabaniseedfarm.com/sitemap.xml

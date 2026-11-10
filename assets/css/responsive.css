@@ -1,0 +1,241 @@
+/* ==========================================================================
+   SRABANI SEED FARM – Responsive Stylesheet
+   ========================================================================== */
+
+/* Large Tablets & Small Laptops (<= 1024px) */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .feature-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .product-details-container {
+    gap: 36px;
+  }
+
+  .process-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablets Portrait & Large Phones (<= 768px) */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 64px; /* Space for floating mobile action bar */
+  }
+
+  .floating-contact-bar {
+    display: block;
+  }
+
+  /* Navigation adjustments */
+  .top-bar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .top-info-list {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-menu {
+    display: none; /* Replaced by mobile drawer */
+  }
+
+  .mobile-nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-cta-btn {
+    display: none;
+  }
+
+  /* Hero */
+  .hero-section {
+    padding: 60px 0 75px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-description {
+    font-size: 1.05rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  /* Page headers */
+  .page-header {
+    padding: 44px 0;
+  }
+
+  .page-header-title {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 55px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  /* Subpages Layouts */
+  .products-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .product-details-container {
+    grid-template-columns: 1fr;
+  }
+
+  .product-detail-title {
+    font-size: 1.9rem;
+  }
+
+  .contact-layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-box {
+    padding: 24px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-banner {
+    padding: 40px 20px;
+    margin: 30px 0;
+  }
+
+  .cta-title {
+    font-size: 1.7rem;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-actions .btn {
+    width: 100%;
+  }
+
+  .map-wrapper {
+    height: 340px;
+  }
+}
+
+/* Small Mobile Devices (<= 480px) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .brand-logo-img {
+    height: 40px;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+  }
+
+  .carousel-thumb-btn {
+    flex: 0 0 65px;
+    height: 52px;
+  }
+}
+
+/* High contrast & reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .top-bar, .site-header, .site-footer, .floating-contact-bar, .btn, .carousel-nav-btn {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
