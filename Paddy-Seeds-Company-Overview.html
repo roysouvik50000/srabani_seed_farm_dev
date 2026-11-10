@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenHarvest Seeds</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#006400',secondary:'#4CAF50'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            padding-top: 64px;
+            padding-bottom: 56px;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full bg-primary z-50 shadow-md">
+        <div class="flex items-center justify-between px-4 py-3">
+            <div class="flex items-center">
+                <h1 class="text-white text-2xl font-['Pacifico']">logo</h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="text-white hover:text-gray-200 transition cursor-pointer">Home</a></li>
+                    <li><a href="#products" class="text-white hover:text-gray-200 transition cursor-pointer">Our Products</a></li>
+                    <li><a href="#about" class="text-white hover:text-gray-200 transition cursor-pointer">About Us</a></li>
+                    <li><a href="#contact" class="text-white hover:text-gray-200 transition cursor-pointer">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white w-8 h-8 flex items-center justify-center cursor-pointer">
+                <i class="ri-menu-line ri-lg"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary">
+            <ul class="py-2 px-4 space-y-2">
+                <li><a href="#home" class="block text-white py-2 hover:text-gray-200 transition cursor-pointer">Home</a></li>
+                <li><a href="#products" class="block text-white py-2 hover:text-gray-200 transition cursor-pointer">Our Products</a></li>
+                <li><a href="#about" class="block text-white py-2 hover:text-gray-200 transition cursor-pointer">About Us</a></li>
+                <li><a href="#contact" class="block text-white py-2 hover:text-gray-200 transition cursor-pointer">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-[400px] overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://readdy.ai/api/search-image?query=Beautiful%20paddy%20fields%20with%20golden%20rice%20plants%20under%20blue%20sky%2C%20lush%20green%20terraces%2C%20agricultural%20landscape%2C%20sunlight%2C%20high%20quality%2C%20photorealistic%2C%20professional%20photography&width=375&height=400&seq=hero1&orientation=landscape" alt="Paddy Fields" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+        <div class="relative h-full flex flex-col items-center justify-center text-center px-6">
+            <h2 class="text-white text-3xl font-semibold mb-2">Premium Paddy Seeds</h2>
+            <p class="text-white text-lg mb-6">Growing the future of sustainable agriculture</p>
+            <a href="#products" class="bg-primary hover:bg-opacity-90 text-white px-6 py-3 !rounded-button font-medium transition cursor-pointer">Explore Products</a>
+        </div>
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="ri-arrow-down-line ri-lg text-white w-8 h-8 flex items-center justify-center"></i>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-10 px-4">
+        <div class="grid grid-cols-2 gap-4">
+            <div class="bg-gray-50 p-4 rounded flex flex-col items-center text-center">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
+                    <i class="ri-leaf-line ri-lg text-primary"></i>
+                </div>
+                <h3 class="text-primary font-medium mb-1">High Yield</h3>
+                <p class="text-gray-600 text-sm">Up to 25% more yield than standard varieties</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded flex flex-col items-center text-center">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
+                    <i class="ri-water-flash-line ri-lg text-primary"></i>
+                </div>
+                <h3 class="text-primary font-medium mb-1">Drought Resistant</h3>
+                <p class="text-gray-600 text-sm">Thrives in challenging weather conditions</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded flex flex-col items-center text-center">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
+                    <i class="ri-bug-line ri-lg text-primary"></i>
+                </div>
+                <h3 class="text-primary font-medium mb-1">Pest Resistant</h3>
+                <p class="text-gray-600 text-sm">Natural resistance to common pests</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded flex flex-col items-center text-center">
+                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
+                    <i class="ri-seedling-line ri-lg text-primary"></i>
+                </div>
+                <h3 class="text-primary font-medium mb-1">Organic</h3>
+                <p class="text-gray-600 text-sm">100% organic certified seeds</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Products Section -->
+    <section id="products" class="py-10 px-4 bg-gray-50">
+        <div class="text-center mb-8">
+            <h2 class="text-2xl font-semibold text-primary mb-2">Our Products</h2>
+            <p class="text-gray-600">Discover our premium paddy seed varieties</p>
+        </div>
+
+        <div class="mb-6 overflow-x-auto">
+            <div class="flex space-x-2 min-w-max">
+                <button class="bg-primary text-white px-4 py-2 !rounded-button text-sm font-medium cursor-pointer">All Seeds</button>
+                <button class="bg-white text-gray-700 px-4 py-2 !rounded-button text-sm font-medium cursor-pointer">High Yield</button>
+                <button class="bg-white text-gray-700 px-4 py-2 !rounded-button text-sm font-medium cursor-pointer">Drought Resistant</button>
+                <button class="bg-white text-gray-700 px-4 py-2 !rounded-button text-sm font-medium cursor-pointer">Organic</button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="h-32 overflow-hidden">
+                    <img src="https://readdy.ai/api/search-image?query=High%20quality%20paddy%20rice%20seeds%2C%20close-up%20of%20premium%20rice%20grains%2C%20isolated%20on%20white%20background%2C%20professional%20product%20photography%2C%20detailed%20texture%2C%20bright%20lighting&width=180&height=128&seq=product1&orientation=landscape" alt="Golden Harvest" class="w-full h-full object-cover">
+                </div>
+                <div class="p-3">
+                    <h3 class="text-primary font-medium">Golden Harvest</h3>
+                    <p class="text-gray-600 text-xs mb-2">High-yield variety with golden grains</p>
+                    <button class="bg-primary text-white text-xs px-3 py-1.5 !rounded-button cursor-pointer">Learn More</button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="h-32 overflow-hidden">
+                    <img src="https://readdy.ai/api/search-image?query=Premium%20long%20grain%20rice%20seeds%2C%20close-up%20of%20high%20quality%20paddy%20seeds%2C%20isolated%20on%20white%20background%2C%20professional%20product%20photography%2C%20detailed%20texture%2C%20bright%20lighting&width=180&height=128&seq=product2&orientation=landscape" alt="Long Grain Pro" class="w-full h-full object-cover">
+                </div>
+                <div class="p-3">
+                    <h3 class="text-primary font-medium">Long Grain Pro</h3>
+                    <p class="text-gray-600 text-xs mb-2">Premium long grain variety</p>
+                    <button class="bg-primary text-white text-xs px-3 py-1.5 !rounded-button cursor-pointer">Learn More</button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="h-32 overflow-hidden">
+                    <img src="https://readdy.ai/api/search-image?query=Organic%20brown%20rice%20seeds%2C%20close-up%20of%20natural%20paddy%20seeds%2C%20isolated%20on%20white%20background%2C%20professional%20product%20photography%2C%20detailed%20texture%2C%20bright%20lighting&width=180&height=128&seq=product3&orientation=landscape" alt="Eco Organic" class="w-full h-full object-cover">
+                </div>
+                <div class="p-3">
+                    <h3 class="text-primary font-medium">Eco Organic</h3>
+                    <p class="text-gray-600 text-xs mb-2">100% certified organic seeds</p>
+                    <button class="bg-primary text-white text-xs px-3 py-1.5 !rounded-button cursor-pointer">Learn More</button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="h-32 overflow-hidden">
+                    <img src="https://readdy.ai/api/search-image?query=Drought%20resistant%20paddy%20seeds%2C%20close-up%20of%20hardy%20rice%20grains%2C%20isolated%20on%20white%20background%2C%20professional%20product%20photography%2C%20detailed%20texture%2C%20bright%20lighting&width=180&height=128&seq=product4&orientation=landscape" alt="DroughtShield" class="w-full h-full object-cover">
+                </div>
+                <div class="p-3">
+                    <h3 class="text-primary font-medium">DroughtShield</h3>
+                    <p class="text-gray-600 text-xs mb-2">Resistant to dry conditions</p>
+                    <button class="bg-primary text-white text-xs px-3 py-1.5 !rounded-button cursor-pointer">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-6">
+            <button class="bg-white border border-primary text-primary px-5 py-2 !rounded-button font-medium cursor-pointer">View All Products</button>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-10 px-4">
+        <div class="text-center mb-8">
+            <h2 class="text-2xl font-semibold text-primary mb-2">About Us</h2>
+            <p class="text-gray-600">Our journey in sustainable agriculture</p>
+        </div>
+
+        <div class="mb-8">
+            <div class="rounded-lg overflow-hidden mb-6">
+                <img src="https://readdy.ai/api/search-image?query=Modern%20agricultural%20research%20facility%20with%20scientists%20working%20on%20rice%20seeds%2C%20laboratory%20setting%2C%20professional%20equipment%2C%20bright%20and%20clean%20environment%2C%20high%20quality%20photography&width=375&height=200&seq=about1&orientation=landscape" alt="Our Facility" class="w-full h-full object-cover">
+            </div>
+            <p class="text-gray-700 mb-4">Founded in 2005, GreenHarvest Seeds has been at the forefront of agricultural innovation for over 20 years. We specialize in developing high-quality paddy seeds that help farmers maximize their yields while practicing sustainable agriculture.</p>
+            <p class="text-gray-700">Our team of agricultural scientists and researchers work tirelessly to develop seed varieties that are not only high-yielding but also resistant to pests, diseases, and adverse weather conditions.</p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-gray-50 p-4 rounded-lg text-center">
+                <div class="text-primary text-2xl font-bold mb-1">20+</div>
+                <p class="text-gray-600 text-sm">Years of Experience</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg text-center">
+                <div class="text-primary text-2xl font-bold mb-1">15+</div>
+                <p class="text-gray-600 text-sm">Seed Varieties</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg text-center">
+                <div class="text-primary text-2xl font-bold mb-1">50K+</div>
+                <p class="text-gray-600 text-sm">Farmers Served</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg text-center">
+                <div class="text-primary text-2xl font-bold mb-1">10+</div>
+                <p class="text-gray-600 text-sm">Countries Reached</p>
+            </div>
+        </div>
+
+        <div class="bg-primary/5 p-4 rounded-lg">
+            <h3 class="text-primary font-medium mb-2">Our Mission</h3>
+            <p class="text-gray-700 text-sm">To empower farmers with innovative seed solutions that increase productivity, enhance food security, and promote sustainable agricultural practices across the globe.</p>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-10 px-4 bg-gray-50">
+        <div class="text-center mb-8">
+            <h2 class="text-2xl font-semibold text-primary mb-2">Contact Us</h2>
+            <p class="text-gray-600">Get in touch with our team</p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm p-5 mb-6">
+            <form id="contact-form">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 text-sm font-medium mb-1">Full Name</label>
+                    <input type="text" id="name" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 text-sm font-medium mb-1">Email Address</label>
+                    <input type="email" id="email" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary" required>
+                </div>
+                <div class="mb-4">
+                    <label for="subject" class="block text-gray-700 text-sm font-medium mb-1">Subject</label>
+                    <input type="text" id="subject" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700 text-sm font-medium mb-1">Message</label>
+                    <textarea id="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-primary" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-primary hover:bg-opacity-90 text-white py-2.5 !rounded-button font-medium transition cursor-pointer">Send Message</button>
+            </form>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-sm p-5 mb-6">
+            <h3 class="text-primary font-medium mb-3">Our Location</h3>
+            <div class="h-[200px] bg-gray-100 rounded overflow-hidden mb-4">
+                <img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="Map" class="w-full h-full object-cover">
+            </div>
+            <div class="space-y-2">
+                <div class="flex items-start">
+                    <div class="w-6 h-6 flex items-center justify-center text-primary mr-2">
+                        <i class="ri-map-pin-line"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">123 Agricultural Drive, Green Valley, CA 94523, USA</p>
+                </div>
+                <div class="flex items-start">
+                    <div class="w-6 h-6 flex items-center justify-center text-primary mr-2">
+                        <i class="ri-phone-line"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">+1 (555) 123-4567</p>
+                </div>
+                <div class="flex items-start">
+                    <div class="w-6 h-6 flex items-center justify-center text-primary mr-2">
+                        <i class="ri-mail-line"></i>
+                    </div>
+                    <p class="text-gray-700 text-sm">info@greenharvest-seeds.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <h3 class="text-primary font-medium mb-3">Follow Us</h3>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white cursor-pointer">
+                    <i class="ri-facebook-fill"></i>
+                </a>
+                <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white cursor-pointer">
+                    <i class="ri-twitter-fill"></i>
+                </a>
+                <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white cursor-pointer">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white cursor-pointer">
+                    <i class="ri-linkedin-fill"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-6 px-4">
+        <div class="mb-6">
+            <h2 class="text-xl font-['Pacifico'] mb-4">logo</h2>
+            <p class="text-white/80 text-sm mb-4">Premium paddy seeds for sustainable agriculture and maximum yields.</p>
+            <div class="flex space-x-3">
+                <a href="#" class="text-white/80 hover:text-white cursor-pointer">
+                    <i class="ri-facebook-fill ri-lg"></i>
+                </a>
+                <a href="#" class="text-white/80 hover:text-white cursor-pointer">
+                    <i class="ri-twitter-fill ri-lg"></i>
+                </a>
+                <a href="#" class="text-white/80 hover:text-white cursor-pointer">
+                    <i class="ri-instagram-line ri-lg"></i>
+                </a>
+                <a href="#" class="text-white/80 hover:text-white cursor-pointer">
+                    <i class="ri-linkedin-fill ri-lg"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mb-6">
+            <div>
+                <h3 class="text-white font-medium mb-2">Quick Links</h3>
+                <ul class="space-y-1">
+                    <li><a href="#home" class="text-white/80 text-sm hover:text-white cursor-pointer">Home</a></li>
+                    <li><a href="#products" class="text-white/80 text-sm hover:text-white cursor-pointer">Our Products</a></li>
+                    <li><a href="#about" class="text-white/80 text-sm hover:text-white cursor-pointer">About Us</a></li>
+                    <li><a href="#contact" class="text-white/80 text-sm hover:text-white cursor-pointer">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-medium mb-2">Newsletter</h3>
+                <p class="text-white/80 text-sm mb-2">Subscribe for updates</p>
+                <form class="flex">
+                    <input type="email" placeholder="Your email" class="flex-1 px-3 py-2 text-sm rounded-l-button text-gray-700 focus:outline-none">
+                    <button type="submit" class="bg-secondary text-white px-3 py-2 rounded-r-button text-sm cursor-pointer">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="border-t border-white/20 pt-4 text-center">
+            <p class="text-white/80 text-xs">© 2025 GreenHarvest Seeds. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Tab Bar (Mobile) -->
+    <div class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 md:hidden z-50">
+        <div class="grid grid-cols-4 h-14">
+            <a href="#home" class="flex flex-col items-center justify-center cursor-pointer">
+                <i class="ri-home-5-line text-primary"></i>
+                <span class="text-xs mt-1 text-gray-600">Home</span>
+            </a>
+            <a href="#products" class="flex flex-col items-center justify-center cursor-pointer">
+                <i class="ri-seedling-line text-gray-600"></i>
+                <span class="text-xs mt-1 text-gray-600">Products</span>
+            </a>
+            <a href="#about" class="flex flex-col items-center justify-center cursor-pointer">
+                <i class="ri-information-line text-gray-600"></i>
+                <span class="text-xs mt-1 text-gray-600">About</span>
+            </a>
+            <a href="#contact" class="flex flex-col items-center justify-center cursor-pointer">
+                <i class="ri-customer-service-2-line text-gray-600"></i>
+                <span class="text-xs mt-1 text-gray-600">Contact</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative bg-white rounded-lg p-6 w-[80%] max-w-md">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="ri-check-line ri-2x text-green-600"></i>
+                </div>
+                <h3 class="text-xl font-medium text-gray-900 mb-2">Message Sent!</h3>
+                <p class="text-gray-600 mb-6">Thank you for contacting us. We'll get back to you shortly.</p>
+                <button id="close-modal" class="bg-primary text-white px-5 py-2 !rounded-button cursor-pointer">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script id="mobile-menu-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close menu when clicking on a link
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+
+    <script id="tab-bar-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabLinks = document.querySelectorAll('.fixed.bottom-0 a');
+            
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Remove active class from all links
+                    tabLinks.forEach(l => {
+                        l.querySelector('i').classList.remove('text-primary');
+                        l.querySelector('i').classList.add('text-gray-600');
+                    });
+                    
+                    // Add active class to clicked link
+                    this.querySelector('i').classList.remove('text-gray-600');
+                    this.querySelector('i').classList.add('text-primary');
+                });
+            });
+        });
+    </script>
+    <script id="contact-form-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            const successModal = document.getElementById('success-modal');
+            const closeModal = document.getElementById('close-modal');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simulate form submission
+                setTimeout(function() {
+                    // Show success modal
+                    successModal.classList.remove('hidden');
+                    
+                    // Reset form
+                    contactForm.reset();
+                }, 1000);
+            });
+            
+            closeModal.addEventListener('click', function() {
+                successModal.classList.add('hidden');
+            });
+        });
+    </script>
+
+    <script id="smooth-scroll-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scroll for all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        // Offset for fixed header
+                        const headerHeight = 64;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
