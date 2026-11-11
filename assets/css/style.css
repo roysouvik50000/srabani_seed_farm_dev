@@ -15,6 +15,7 @@
   --dark-green: #164D2A;
   --golden: #D6A52C;
   --golden-hover: #BF8E1B;
+  --golden-dark: #8F6710;
   --golden-light: #FFF4D6;
   --white: #FFFFFF;
   --light-green: #EAF4E9;
@@ -346,11 +347,46 @@ p:last-child {
   align-items: center;
   gap: 12px;
   text-decoration: none;
+  line-height: 1;
 }
 
 .brand-logo-img {
   height: 48px;
   width: auto;
+  flex-shrink: 0;
+  display: block;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.brand-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--dark-green);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+}
+
+.brand-link:hover .brand-title {
+  color: var(--primary-green);
+}
+
+.brand-tagline {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--golden-dark);
+  letter-spacing: 0.03em;
+  margin-top: 2px;
 }
 
 .nav-menu {
@@ -437,6 +473,22 @@ p:last-child {
   padding-bottom: 16px;
   margin-bottom: 20px;
   border-bottom: 1px solid var(--border-light);
+}
+
+.mobile-drawer-header .brand-link {
+  gap: 10px;
+}
+
+.mobile-drawer-header .brand-logo-img {
+  height: 40px;
+}
+
+.mobile-drawer-header .brand-title {
+  font-size: 1rem;
+}
+
+.mobile-drawer-header .brand-tagline {
+  font-size: 0.65rem;
 }
 
 .mobile-drawer-close {

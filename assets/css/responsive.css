@@ -4,6 +4,18 @@
 
 /* Large Tablets & Small Laptops (<= 1024px) */
 @media (max-width: 1024px) {
+  .nav-menu {
+    gap: 16px;
+  }
+
+  .brand-title {
+    font-size: 1.15rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.68rem;
+  }
+
   .hero-title {
     font-size: 2.8rem;
   }
@@ -70,6 +82,18 @@
 
   .nav-cta-btn {
     display: none;
+  }
+
+  .brand-logo-img {
+    height: 44px;
+  }
+
+  .brand-title {
+    font-size: 1.1rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.68rem;
   }
 
   /* Hero */
@@ -177,8 +201,20 @@
     font-size: 1.85rem;
   }
 
+  .brand-link {
+    gap: 9px;
+  }
+
   .brand-logo-img {
-    height: 40px;
+    height: 38px;
+  }
+
+  .brand-title {
+    font-size: 0.95rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.62rem;
   }
 
   .highlights-grid {
@@ -210,6 +246,25 @@
   .carousel-thumb-btn {
     flex: 0 0 65px;
     height: 52px;
+  }
+}
+
+/* Extra Small Phones (<= 360px) */
+@media (max-width: 360px) {
+  .brand-link {
+    gap: 7px;
+  }
+
+  .brand-logo-img {
+    height: 34px;
+  }
+
+  .brand-title {
+    font-size: 0.85rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.55rem;
   }
 }
 
