@@ -70,9 +70,9 @@ Built strictly using:
     │   ├── product-details.js       # Dynamic Details Page, Carousel & Related Seeds
     │   └── seo.js                   # Client-side Schema and SEO Helpers
     └── images/
-        ├── logo.svg                 # Vector Brand Logo (Wheat/Paddy motif)
-        ├── favicon.svg              # Vector Favicon (Leaf & Paddy Shield)
-        ├── og-image.jpg             # 1200x630 OpenGraph / Social Share Banner
+        ├── logo.png                 # Vector Brand Logo (Wheat/Paddy motif)
+        ├── logo.png              # Vector Favicon (Leaf & Paddy Shield)
+        ├── logo.png             # 1200x630 OpenGraph / Social Share Banner
         ├── hero/
         │   └── hero-bg.jpg          # Green Paddy Field Backdrop
         ├── about/

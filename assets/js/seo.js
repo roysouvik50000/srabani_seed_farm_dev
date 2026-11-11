@@ -19,7 +19,7 @@
     }
 
     const domain = window.location.origin.includes('http') ? window.location.origin : 'https://srabaniseedfarm.com';
-    const firstImg = product.images && product.images.length > 0 ? product.images[0].src : 'assets/images/og-image.jpg';
+    const firstImg = product.images && product.images.length > 0 ? product.images[0].src : 'assets/images/logo.png';
 
     const productSchema = {
       "@context": "https://schema.org",
