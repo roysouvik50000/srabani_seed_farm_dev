@@ -326,6 +326,10 @@
     if (inquireBtn) {
       inquireBtn.href = `${prefix}contact.html?product=${encodeURIComponent(product.name)}`;
     }
+    const whatsappBtn = document.getElementById('whatsappProductBtn');
+    if (whatsappBtn) {
+      whatsappBtn.href = `https://wa.me/919932442449?text=${encodeURIComponent('Hello SRABANI SEED FARM, I would like to inquire about ' + product.name + ' paddy seeds.')}`;
+    }
 
     // 11. Render Related Products
     const relatedSection = document.getElementById('relatedProductsSection');

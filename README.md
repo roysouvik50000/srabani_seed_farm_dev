@@ -17,7 +17,11 @@ Built strictly using:
 - **Address:** Sabang - Moharh Rd, Sindurmuri, Sabang, West Bengal 721144, India
 - **Phone Numbers:**
   - `+91 99324 42449` (Direct / WhatsApp / Orders)
+  - `+91 83484 56914` (Farm Contact / Mobile)
   - `+91 3222 291 185` (Office / Landline)
+- **Social Media & Messaging:**
+  - WhatsApp: `https://wa.me/919932442449` (+91 99324 42449)
+  - Facebook: `https://www.facebook.com/share/1JAVYuC28b/`
 - **Google Maps:** Centered on Sabang, West Bengal coordinates `(22.176728, 87.610644)`
 
 ---

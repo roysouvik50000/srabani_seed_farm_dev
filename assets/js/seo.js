@@ -42,7 +42,8 @@
         "seller": {
           "@type": "LocalBusiness",
           "name": "SRABANI SEED FARM",
-          "telephone": "+919932442449",
+          "telephone": ["+919932442449", "+918348456914"],
+          "sameAs": ["https://www.facebook.com/share/1JAVYuC28b/"],
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Sabang - Moharh Rd, Sindurmuri",

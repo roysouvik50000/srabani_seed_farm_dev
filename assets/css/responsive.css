@@ -58,6 +58,18 @@
     display: block;
   }
 
+  .floating-whatsapp-btn {
+    bottom: 72px;
+    right: 14px;
+    width: 46px;
+    height: 46px;
+  }
+
+  .floating-whatsapp-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+
   /* Navigation adjustments */
   .top-bar-inner {
     flex-direction: column;
@@ -246,6 +258,11 @@
   .carousel-thumb-btn {
     flex: 0 0 65px;
     height: 52px;
+  }
+
+  .floating-contact-inner .btn {
+    padding: 7px 4px;
+    font-size: 0.78rem;
   }
 }
 
