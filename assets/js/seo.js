@@ -19,7 +19,7 @@
     }
 
     const domain = window.location.origin.includes('http') ? window.location.origin : 'https://srabaniseedfarm.com';
-    const firstImg = product.images && product.images.length > 0 ? product.images[0].src : 'assets/images/og-image.jpg';
+    const firstImg = product.images && product.images.length > 0 ? product.images[0].src : 'assets/images/logo.png';
 
     const productSchema = {
       "@context": "https://schema.org",
@@ -42,7 +42,8 @@
         "seller": {
           "@type": "LocalBusiness",
           "name": "SRABANI SEED FARM",
-          "telephone": "+919932442449",
+          "telephone": ["+919932442449", "+918348456914"],
+          "sameAs": ["https://www.facebook.com/share/1JAVYuC28b/"],
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Sabang - Moharh Rd, Sindurmuri",

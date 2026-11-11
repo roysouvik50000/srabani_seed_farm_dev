@@ -17,7 +17,11 @@ Built strictly using:
 - **Address:** Sabang - Moharh Rd, Sindurmuri, Sabang, West Bengal 721144, India
 - **Phone Numbers:**
   - `+91 99324 42449` (Direct / WhatsApp / Orders)
+  - `+91 83484 56914` (Farm Contact / Mobile)
   - `+91 3222 291 185` (Office / Landline)
+- **Social Media & Messaging:**
+  - WhatsApp: `https://wa.me/919932442449` (+91 99324 42449)
+  - Facebook: `https://www.facebook.com/share/1JAVYuC28b/`
 - **Google Maps:** Centered on Sabang, West Bengal coordinates `(22.176728, 87.610644)`
 
 ---
@@ -70,9 +74,9 @@ Built strictly using:
     │   ├── product-details.js       # Dynamic Details Page, Carousel & Related Seeds
     │   └── seo.js                   # Client-side Schema and SEO Helpers
     └── images/
-        ├── logo.svg                 # Vector Brand Logo (Wheat/Paddy motif)
-        ├── favicon.svg              # Vector Favicon (Leaf & Paddy Shield)
-        ├── og-image.jpg             # 1200x630 OpenGraph / Social Share Banner
+        ├── logo.png                 # Vector Brand Logo (Wheat/Paddy motif)
+        ├── logo.png              # Vector Favicon (Leaf & Paddy Shield)
+        ├── logo.png             # 1200x630 OpenGraph / Social Share Banner
         ├── hero/
         │   └── hero-bg.jpg          # Green Paddy Field Backdrop
         ├── about/

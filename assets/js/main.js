@@ -136,9 +136,10 @@
             Because SRABANI SEED FARM operates on direct farmer communication, you can connect with our Sabang center immediately:
           </p>
           <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
-            <a href="tel:+919932442449" class="btn btn-sm btn-primary">📞 Call Farm (+91 99324 42449)</a>
-            <a href="tel:+913222291185" class="btn btn-sm btn-outline-green">📞 Call Landline (+91 3222 291 185)</a>
-            <a href="mailto:srabaniseedfarm@gmail.com?subject=${encodeURIComponent('Inquiry: ' + subject)}&body=${encodeURIComponent('Name: ' + name + '\nPhone: ' + phone + '\nMessage: ' + message)}" class="btn btn-sm btn-golden">✉ Send via Email Client</a>
+            <a href="https://wa.me/919932442449?text=${encodeURIComponent('Hello SRABANI SEED FARM, my name is ' + name + ' (Phone: ' + phone + '). Inquiry about ' + subject + ': ' + message)}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-whatsapp">💬 Send to WhatsApp (+91 99324 42449)</a>
+            <a href="tel:+919932442449" class="btn btn-sm btn-primary">📞 Call +91 99324 42449</a>
+            <a href="tel:+918348456914" class="btn btn-sm btn-outline-green">📞 Call +91 83484 56914</a>
+            <a href="mailto:srabaniseedfarm@gmail.com?subject=${encodeURIComponent('Inquiry: ' + subject)}&body=${encodeURIComponent('Name: ' + name + '\nPhone: ' + phone + '\nMessage: ' + message)}" class="btn btn-sm btn-golden">✉ Send via Email</a>
           </div>
         `;
       }
