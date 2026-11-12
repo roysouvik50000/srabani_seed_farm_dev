@@ -1,8 +1,11 @@
 /* ==========================================================================
    SRABANI SEED FARM – Responsive Stylesheet
+   Mobile-First Refinements, Touch Ergonomics & Clean Line Breaking
    ========================================================================== */
 
-/* Large Tablets & Small Laptops (<= 1024px) */
+/* ==========================================================================
+   Large Tablets & Small Laptops (<= 1024px)
+   ========================================================================== */
 @media (max-width: 1024px) {
   .nav-menu {
     gap: 16px;
@@ -17,21 +20,22 @@
   }
 
   .hero-title {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
   }
 
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 22px;
   }
 
   .feature-cards-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .highlights-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 14px;
   }
 
   .footer-grid {
@@ -40,29 +44,95 @@
   }
 
   .product-details-container {
-    gap: 36px;
+    gap: 32px;
   }
 
   .process-steps-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 }
 
-/* Tablets Portrait & Large Phones (<= 768px) */
+/* ==========================================================================
+   Tablets Portrait & Mobile Devices (<= 768px)
+   Fixed Nav Bar on Top in Mobile Screen
+   ========================================================================== */
 @media (max-width: 768px) {
-  body {
-    padding-bottom: 64px; /* Space for floating mobile action bar */
+  /* 1. Firmly Fix Navigation Bar on Top of Mobile Screen */
+  .site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: calc(var(--header-height-mobile, 60px) + env(safe-area-inset-top, 0px)) !important;
+    padding-top: env(safe-area-inset-top, 0px);
+    z-index: 1000 !important;
+    background-color: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 2px 14px rgba(15, 23, 42, 0.08) !important;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    transition: none;
   }
 
+  .site-header .navbar {
+    width: 100%;
+    height: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* 2. Top Padding on Body so content starts cleanly below the fixed nav bar */
+  body {
+    padding-top: calc(var(--header-height-mobile, 60px) + env(safe-area-inset-top, 0px)) !important;
+    padding-bottom: calc(66px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  /* 3. Hide redundant top utility bar on mobile screen so the nav bar is cleanly fixed right at the top */
+  .top-bar {
+    display: none !important;
+  }
+
+  /* Container padding for mobile */
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Section Spacing on Mobile: compact and engaging without endless empty scrolls */
+  .section {
+    padding: 42px 0;
+  }
+
+  .section-heading-wrap {
+    margin-bottom: 30px;
+  }
+
+  .section-title {
+    font-size: clamp(1.35rem, 4.5vw, 1.8rem);
+    margin-bottom: 8px;
+  }
+
+  .section-desc {
+    font-size: 0.96rem;
+  }
+
+  /* Floating Dock & WhatsApp on Mobile */
   .floating-contact-bar {
     display: block;
   }
 
   .floating-whatsapp-btn {
-    bottom: 72px;
+    bottom: calc(76px + env(safe-area-inset-bottom, 0px));
     right: 14px;
-    width: 46px;
-    height: 46px;
+    width: 48px;
+    height: 48px;
   }
 
   .floating-whatsapp-btn svg {
@@ -70,151 +140,352 @@
     height: 24px;
   }
 
-  /* Navigation adjustments */
-  .top-bar-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-
-  .top-info-list {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
+  /* Navigation Header on Mobile */
   .nav-menu {
-    display: none; /* Replaced by mobile drawer */
+    display: none; /* Controlled by mobile drawer */
+  }
+
+  .nav-cta-btn {
+    display: none; /* Handled by mobile call button & floating bar */
+  }
+
+  .mobile-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
   .mobile-nav-toggle {
     display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .nav-cta-btn {
-    display: none;
   }
 
   .brand-logo-img {
-    height: 44px;
+    height: 40px;
   }
 
   .brand-title {
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 3.4vw + 0.1rem, 1.15rem);
   }
 
   .brand-tagline {
-    font-size: 0.68rem;
+    font-size: clamp(0.58rem, 2vw, 0.68rem);
   }
 
-  /* Hero */
+  /* Hero Section on Mobile */
   .hero-section {
-    padding: 60px 0 75px;
+    padding: 34px 0 44px;
+    background-position: 70% center;
+  }
+
+  .hero-pill {
+    padding: 5px 12px;
+    font-size: 0.78rem;
+    margin-bottom: 14px;
   }
 
   .hero-title {
-    font-size: 2.2rem;
+    font-size: clamp(1.75rem, 5.5vw + 0.3rem, 2.4rem);
+    line-height: 1.18;
+    margin-bottom: 14px;
+    text-wrap: balance;
   }
 
   .hero-description {
-    font-size: 1.05rem;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
   }
 
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
+    gap: 10px;
+    width: 100%;
   }
 
   .hero-actions .btn {
     width: 100%;
+    min-height: 46px;
+    font-size: 0.98rem;
   }
 
-  /* Page headers */
+  /* Highlights Strip on Mobile */
+  .hero-highlights-strip {
+    padding: 16px 0;
+  }
+
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .highlight-item {
+    padding: 6px 4px;
+    gap: 10px;
+  }
+
+  .highlight-icon-box {
+    width: 40px;
+    height: 40px;
+  }
+
+  .highlight-icon-box svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .highlight-title {
+    font-size: 0.88rem;
+  }
+
+  .highlight-desc {
+    font-size: 0.76rem;
+  }
+
+  /* Page headers on subpages */
   .page-header {
-    padding: 44px 0;
+    padding: 36px 0;
   }
 
   .page-header-title {
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 5vw, 2.1rem);
   }
 
-  .section {
-    padding: 55px 0;
+  .page-header-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
   }
 
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  /* Subpages Layouts */
+  /* Products Grid on Mobile */
   .products-grid {
     grid-template-columns: 1fr;
-    max-width: 480px;
+    max-width: 460px;
     margin-left: auto;
     margin-right: auto;
+    gap: 20px;
   }
 
+  .product-card-body {
+    padding: 18px 16px;
+  }
+
+  .product-card-desc {
+    margin-bottom: 14px;
+  }
+
+  .qa-banner {
+    margin-top: 28px !important;
+    padding: 18px 16px !important;
+  }
+
+  /* Product Details Layout on Mobile */
   .product-details-container {
     grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+
+  .carousel-wrapper {
+    padding: 10px;
   }
 
   .product-detail-title {
-    font-size: 1.9rem;
+    font-size: clamp(1.5rem, 5vw, 1.95rem);
   }
 
+  .product-short-desc {
+    font-size: 1.02rem;
+    margin-bottom: 14px;
+  }
+
+  .product-full-desc {
+    font-size: 0.94rem;
+    margin-bottom: 18px;
+  }
+
+  .product-features-wrap {
+    padding: 14px 16px;
+    margin-bottom: 20px;
+  }
+
+  .product-cta-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .product-cta-group .btn {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  /* Contact page on Mobile */
   .contact-layout-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
   }
 
   .contact-form-box {
-    padding: 24px 20px;
+    padding: 22px 18px;
   }
 
   .form-row {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
+  .contact-card {
+    padding: 18px 16px;
+  }
+
+  .map-wrapper {
+    height: 280px;
+  }
+
+  /* About page on Mobile */
   .about-intro-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 24px;
   }
 
   .mission-vision-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
   }
 
+  .mission-card {
+    padding: 24px 18px;
+  }
+
+  /* Feature Cards (Why Choose Us) on Mobile */
+  .feature-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .feature-card {
+    padding: 22px 18px;
+  }
+
+  /* CTA Banner on Mobile */
   .cta-banner {
-    padding: 40px 20px;
-    margin: 30px 0;
+    padding: 38px 18px;
+    margin: 28px auto;
+    border-radius: var(--radius-lg);
   }
 
   .cta-title {
-    font-size: 1.7rem;
+    font-size: clamp(1.4rem, 4vw + 0.2rem, 1.8rem);
+  }
+
+  .cta-desc {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
   }
 
   .cta-actions {
     flex-direction: column;
     width: 100%;
+    gap: 10px;
   }
 
   .cta-actions .btn {
     width: 100%;
+    min-height: 46px;
   }
 
-  .map-wrapper {
-    height: 340px;
+  /* Footer on Mobile */
+  .site-footer {
+    padding: 44px 0 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
   }
 }
 
-/* Small Mobile Devices (<= 480px) */
+/* ==========================================================================
+   Small Mobile Devices (<= 640px) - Stacked Mobile Specifications Table
+   ========================================================================== */
+@media (max-width: 640px) {
+  /* Transform rigid specs table into clean, thumb-friendly mobile cards */
+  .specs-table, 
+  .specs-table tbody, 
+  .specs-table tr, 
+  .specs-table th, 
+  .specs-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .specs-table tr {
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .specs-table tr:last-child {
+    border-bottom: none;
+  }
+
+  .specs-table th {
+    background-color: var(--primary-green-subtle);
+    color: var(--primary-green-hover);
+    padding: 8px 14px 4px;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: none;
+    font-weight: 700;
+  }
+
+  .specs-table td {
+    padding: 4px 14px 10px;
+    border-bottom: none;
+    font-size: 0.94rem;
+    color: var(--dark-text);
+  }
+}
+
+/* ==========================================================================
+   Small Phones (<= 480px)
+   ========================================================================== */
 @media (max-width: 480px) {
+  :root {
+    --header-height-mobile: 56px;
+  }
+
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .section {
+    padding: 34px 0;
+  }
+
+  .hero-section {
+    padding: 28px 0 36px;
+  }
+
   .hero-title {
-    font-size: 1.85rem;
+    font-size: clamp(1.6rem, 5.5vw, 1.95rem);
+    line-height: 1.2;
   }
 
   .brand-link {
-    gap: 9px;
+    gap: 8px;
   }
 
   .brand-logo-img {
@@ -229,47 +500,60 @@
     font-size: 0.62rem;
   }
 
-  .highlights-grid {
-    grid-template-columns: 1fr;
+  .mobile-call-pill {
+    padding: 5px 10px;
+    font-size: 0.78rem;
+    min-height: 36px;
   }
 
-  .feature-cards-grid {
+  .highlights-grid {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .highlight-item {
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
   }
 
   .process-steps-grid {
     grid-template-columns: 1fr;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-bottom-links {
-    justify-content: center;
+    gap: 12px;
   }
 
   .carousel-thumb-btn {
-    flex: 0 0 65px;
+    flex: 0 0 64px;
     height: 52px;
   }
 
+  .floating-contact-inner {
+    gap: 6px;
+  }
+
   .floating-contact-inner .btn {
-    padding: 7px 4px;
+    padding: 8px 4px;
     font-size: 0.78rem;
+    min-height: 42px;
   }
 }
 
-/* Extra Small Phones (<= 360px) */
+/* ==========================================================================
+   Extra Small Phones (<= 360px - e.g. Galaxy Fold cover, older compact devices)
+   ========================================================================== */
 @media (max-width: 360px) {
+  :root {
+    --header-height-mobile: 52px;
+  }
+
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
   .brand-link {
-    gap: 7px;
+    gap: 6px;
   }
 
   .brand-logo-img {
@@ -277,15 +561,31 @@
   }
 
   .brand-title {
-    font-size: 0.85rem;
+    font-size: 0.86rem;
   }
 
   .brand-tagline {
-    font-size: 0.55rem;
+    font-size: 0.54rem;
+  }
+
+  .mobile-call-pill span {
+    display: none; /* Icon-only on ultra compact screens to avoid colliding with hamburger */
+  }
+
+  .mobile-call-pill {
+    padding: 6px 8px;
+  }
+
+  .floating-contact-inner .btn {
+    font-size: 0.74rem;
+    padding: 6px 2px;
+    gap: 4px;
   }
 }
 
-/* High contrast & reduced motion */
+/* ==========================================================================
+   Accessibility: Reduced Motion
+   ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -295,15 +595,24 @@
   }
 }
 
-/* Print Styles */
+/* ==========================================================================
+   Print Styles
+   ========================================================================== */
 @media print {
-  .top-bar, .site-header, .site-footer, .floating-contact-bar, .btn, .carousel-nav-btn {
+  .top-bar, 
+  .site-header, 
+  .site-footer, 
+  .floating-contact-bar, 
+  .floating-whatsapp-btn, 
+  .btn, 
+  .carousel-nav-btn {
     display: none !important;
   }
 
   body {
     background: #fff;
     color: #000;
+    padding-bottom: 0 !important;
   }
 
   .container {
