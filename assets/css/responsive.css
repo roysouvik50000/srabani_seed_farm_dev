@@ -321,25 +321,138 @@
   /* Contact page on Mobile */
   .contact-layout-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
-    margin-bottom: 40px;
+    gap: 20px;
+    margin-bottom: 36px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-cards-col {
+    gap: 14px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-card {
+    padding: 16px 14px;
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-items: flex-start;
+  }
+
+  .contact-card-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .contact-card-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-card-content {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .contact-card-content h3 {
+    font-size: 1.05rem;
+  }
+
+  .contact-card-content p {
+    font-size: 0.9rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* Make phone and social action buttons inside contact cards wrap and fill full width comfortably */
+  .contact-card-content .contact-action-btn,
+  .contact-card-content .btn {
+    width: 100%;
+    display: flex;
+    white-space: normal !important;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 12px;
+    font-size: 0.88rem;
+    min-height: 44px;
+    box-sizing: border-box;
+    word-break: break-word;
+    margin-bottom: 6px;
+  }
+
+  .contact-social-buttons {
+    gap: 8px;
+    width: 100%;
   }
 
   .contact-form-box {
-    padding: 22px 18px;
+    padding: 20px 14px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    border-radius: var(--radius-lg);
+  }
+
+  .contact-form-title {
+    font-size: 1.4rem;
   }
 
   .form-row {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 0;
   }
 
-  .contact-card {
-    padding: 18px 16px;
+  .form-group {
+    margin-bottom: 14px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-control {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+    padding: 12px 14px;
+    min-height: 48px;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  select.form-control {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 16px 16px;
+    padding-right: 38px;
+  }
+
+  textarea.form-control {
+    min-height: 100px;
+  }
+
+  .map-section {
+    padding: 10px 0 36px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .map-wrapper {
-    height: 280px;
+    height: 260px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .map-wrapper iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
   }
 
   /* About page on Mobile */
@@ -536,6 +649,25 @@
     padding: 8px 4px;
     font-size: 0.78rem;
     min-height: 42px;
+  }
+
+  .contact-card {
+    padding: 14px 12px;
+    gap: 10px;
+  }
+
+  .contact-card-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .contact-card-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .contact-form-box {
+    padding: 16px 12px;
   }
 }
 
