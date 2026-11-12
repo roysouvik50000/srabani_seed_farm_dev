@@ -123,26 +123,41 @@
 
       const name = document.getElementById('inquiryName') ? document.getElementById('inquiryName').value.trim() : '';
       const phone = document.getElementById('inquiryPhone') ? document.getElementById('inquiryPhone').value.trim() : '';
+      const location = document.getElementById('inquiryLocation') ? document.getElementById('inquiryLocation').value.trim() : '';
       const subject = subjectSelect ? subjectSelect.value : 'Paddy Seed Inquiry';
       const message = messageBox ? messageBox.value.trim() : '';
+
+      // Format WhatsApp Message for Srabani Seed Farm (+91 99324 42449)
+      let text = `🌾 *SRABANI SEED FARM - Seed Inquiry*\n\n`;
+      text += `👤 *Name:* ${name}\n`;
+      text += `📞 *Phone:* ${phone}\n`;
+      if (location) {
+        text += `📍 *Location:* ${location}\n`;
+      }
+      text += `🌱 *Variety:* ${subject}\n`;
+      if (message) {
+        text += `📝 *Quantity & Sowing Details:* ${message}\n`;
+      }
+
+      const whatsappNumber = '919932442449';
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
 
       const statusBox = document.getElementById('formStatusNotice');
       if (statusBox) {
         statusBox.className = 'form-status-notice success';
         statusBox.innerHTML = `
-          <strong>Thank you, ${escapeHtml(name)}!</strong><br>
-          Your inquiry for <em>${escapeHtml(subject)}</em> has been prepared.<br>
-          <p style="margin-top: 8px; margin-bottom: 8px; font-size: 0.9rem;">
-            Because SRABANI SEED FARM operates on direct farmer communication, you can connect with our Sabang center immediately:
-          </p>
-          <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
-            <a href="https://wa.me/919932442449?text=${encodeURIComponent('Hello SRABANI SEED FARM, my name is ' + name + ' (Phone: ' + phone + '). Inquiry about ' + subject + ': ' + message)}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-whatsapp">💬 Send to WhatsApp (+91 99324 42449)</a>
-            <a href="tel:+919932442449" class="btn btn-sm btn-primary">📞 Call +91 99324 42449</a>
-            <a href="tel:+918348456914" class="btn btn-sm btn-outline-green">📞 Call +91 83484 56914</a>
-            <a href="mailto:srabaniseedfarm@gmail.com?subject=${encodeURIComponent('Inquiry: ' + subject)}&body=${encodeURIComponent('Name: ' + name + '\nPhone: ' + phone + '\nMessage: ' + message)}" class="btn btn-sm btn-golden">✉ Send via Email</a>
+          <strong>✓ Connecting to WhatsApp...</strong><br>
+          Opening WhatsApp with your inquiry for <em>${escapeHtml(subject)}</em>.<br>
+          <div style="margin-top: 10px;">
+            <a href="${whatsappUrl}" class="btn btn-sm btn-whatsapp btn-block" target="_blank" rel="noopener noreferrer">
+              💬 Click here if WhatsApp didn't open automatically
+            </a>
           </div>
         `;
       }
+
+      // Automatically redirect to WhatsApp with pre-filled inquiry details
+      window.location.href = whatsappUrl;
     });
   }
 
