@@ -55,11 +55,48 @@
 
 /* ==========================================================================
    Tablets Portrait & Mobile Devices (<= 768px)
+   Fixed Nav Bar on Top in Mobile Screen
    ========================================================================== */
 @media (max-width: 768px) {
-  /* Provide bottom breathing room for the floating contact dock */
+  /* 1. Firmly Fix Navigation Bar on Top of Mobile Screen */
+  .site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: calc(var(--header-height-mobile, 60px) + env(safe-area-inset-top, 0px)) !important;
+    padding-top: env(safe-area-inset-top, 0px);
+    z-index: 1000 !important;
+    background-color: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 2px 14px rgba(15, 23, 42, 0.08) !important;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    transition: none;
+  }
+
+  .site-header .navbar {
+    width: 100%;
+    height: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* 2. Top Padding on Body so content starts cleanly below the fixed nav bar */
   body {
-    padding-bottom: calc(66px + env(safe-area-inset-bottom, 0px));
+    padding-top: calc(var(--header-height-mobile, 60px) + env(safe-area-inset-top, 0px)) !important;
+    padding-bottom: calc(66px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  /* 3. Hide redundant top utility bar on mobile screen so the nav bar is cleanly fixed right at the top */
+  .top-bar {
+    display: none !important;
   }
 
   /* Container padding for mobile */
@@ -103,37 +140,7 @@
     height: 24px;
   }
 
-  /* Top Utility Bar on Mobile: Compact & Clean */
-  .top-bar {
-    padding: 6px 0;
-    font-size: 0.78rem;
-  }
-
-  .top-bar-inner {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .top-info-list {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .top-info-item:nth-child(3) {
-    display: none; /* Hide office phone on mobile top bar to prevent clutter; available in drawer & footer */
-  }
-
-  .top-bar-right {
-    display: none; /* Already in drawer, footer, and floating dock; saves screen space */
-  }
-
   /* Navigation Header on Mobile */
-  .navbar {
-    padding: 10px 0;
-  }
-
   .nav-menu {
     display: none; /* Controlled by mobile drawer */
   }
@@ -455,6 +462,10 @@
    Small Phones (<= 480px)
    ========================================================================== */
 @media (max-width: 480px) {
+  :root {
+    --header-height-mobile: 56px;
+  }
+
   .container {
     padding-left: 14px;
     padding-right: 14px;
@@ -532,6 +543,10 @@
    Extra Small Phones (<= 360px - e.g. Galaxy Fold cover, older compact devices)
    ========================================================================== */
 @media (max-width: 360px) {
+  :root {
+    --header-height-mobile: 52px;
+  }
+
   .container {
     padding-left: 12px;
     padding-right: 12px;

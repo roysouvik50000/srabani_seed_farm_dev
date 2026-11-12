@@ -70,6 +70,9 @@
   --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   --max-width: 1200px;
+  
+  --header-height-desktop: 70px;
+  --header-height-mobile: 60px;
 }
 
 /* ==========================================================================
@@ -86,7 +89,8 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
+  scroll-padding-top: calc(var(--header-height-mobile, 60px) + 12px);
 }
 
 body {
@@ -95,7 +99,7 @@ body {
   line-height: 1.65;
   color: var(--body-text);
   background-color: var(--bg-page);
-  overflow-x: hidden;
+  overflow-x: clip;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -144,7 +148,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .skip-link:focus {
-  top: 20px;
+  top: 72px;
 }
 
 /* Container */
