@@ -1,44 +1,5 @@
 [
   {
-    "id": "mtu-7029-nilanjana-dhanaraj",
-    "slug": "mtu-7029-nilanjana-dhanaraj",
-    "name": "MTU-7029 / NILANJANA / DHANARAJ",
-    "season": "Kharif",
-    "category": "OP Paddy (Kharif)",
-    "type": "OP Paddy",
-    "duration": "140-145 Days",
-    "packaging": "6 Kg, 10 Kg, 25 Kg",
-    "shortDescription": "MTU-7029 / NILANJANA / DHANARAJ paddy seed for Kharif season with 140-145 Days crop maturity.",
-    "description": "MTU-7029 / NILANJANA / DHANARAJ is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
-    "features": [
-      "Optimal Kharif season crop cycle (140-145 Days)",
-      "Graded physical purity with minimal chaff and weed seeds",
-      "High germination capacity and vigorous seedling emergence",
-      "Directly processed and packed by SRABANI SEED FARM, Sabang"
-    ],
-    "specifications": {
-      "season": "Kharif Season",
-      "duration": "140-145 Days",
-      "category": "OP Paddy",
-      "packaging": "6 Kg, 10 Kg, 25 Kg",
-      "origin": "Sabang, Paschim Medinipur, West Bengal"
-    },
-    "images": [
-      {
-        "src": "assets/images/products/seed_packet_7.jpeg",
-        "alt": "MTU-7029 / NILANJANA / DHANARAJ SRABANI SEED FARM seed packet"
-      },
-      {
-        "src": "assets/images/products/seed_packet_9.jpeg",
-        "alt": "MTU-7029 / NILANJANA / DHANARAJ SRABANI SEED FARM seed packet"
-      },
-      {
-        "src": "assets/images/products/seed_packet_6.jpeg",
-        "alt": "MTU-7029 / NILANJANA / DHANARAJ SRABANI SEED FARM seed packet"
-      }
-    ]
-  },
-  {
     "id": "bb-11",
     "slug": "bb-11",
     "name": "BB-11",
@@ -113,6 +74,99 @@
       {
         "src": "assets/images/products/seed_packet_6.jpeg",
         "alt": "RAJENDRA MASURI / PRATIKHA SRABANI SEED FARM seed packet"
+      }
+    ]
+  },
+  {
+    "id": "mtu-7029",
+    "slug": "mtu-7029",
+    "name": "MTU-7029",
+    "season": "Kharif",
+    "category": "OP Paddy (Kharif)",
+    "type": "OP Paddy",
+    "duration": "140-145 Days",
+    "packaging": "6 Kg, 10 Kg, 25 Kg",
+    "shortDescription": "MTU-7029 paddy seed for Kharif season with 140-145 days crop maturity.",
+    "description": "MTU-7029 is an OP paddy seed variety processed and packed by SRABANI SEED FARM, Sabang, West Bengal. Thoroughly graded for physical purity and dependable seed quality for Kharif cultivation.",
+    "features": [
+      "Suitable for Kharif season cultivation",
+      "Crop maturity duration of 140-145 days",
+      "Graded physical purity",
+      "Quality processing and packaging by SRABANI SEED FARM"
+    ],
+    "specifications": {
+      "season": "Kharif Season",
+      "duration": "140-145 Days",
+      "category": "OP Paddy",
+      "packaging": "6 Kg, 10 Kg, 25 Kg",
+      "origin": "Sabang, Paschim Medinipur, West Bengal"
+    },
+    "images": [
+      {
+        "src": "assets/images/products/seed_packet_7.jpeg",
+        "alt": "MTU-7029 paddy seed packet"
+      }
+    ]
+  },
+  {
+    "id": "nilanjana",
+    "slug": "nilanjana",
+    "name": "NILANJANA",
+    "season": "Kharif",
+    "category": "OP Paddy (Kharif)",
+    "type": "OP Paddy",
+    "duration": "140-145 Days",
+    "packaging": "6 Kg, 10 Kg, 25 Kg",
+    "shortDescription": "NILANJANA paddy seed for Kharif season with 140-145 days crop maturity.",
+    "description": "NILANJANA is an OP paddy seed variety processed and packed by SRABANI SEED FARM, Sabang, West Bengal. Carefully graded and handled to maintain seed quality and physical purity for Kharif cultivation.",
+    "features": [
+      "Suitable for Kharif season cultivation",
+      "Crop maturity duration of 140-145 days",
+      "Graded physical purity",
+      "Quality processing and packaging by SRABANI SEED FARM"
+    ],
+    "specifications": {
+      "season": "Kharif Season",
+      "duration": "140-145 Days",
+      "category": "OP Paddy",
+      "packaging": "6 Kg, 10 Kg, 25 Kg",
+      "origin": "Sabang, Paschim Medinipur, West Bengal"
+    },
+    "images": [
+      {
+        "src": "assets/images/products/seed_packet_9.jpeg",
+        "alt": "NILANJANA paddy seed packet"
+      }
+    ]
+  },
+  {
+    "id": "dhanaraj",
+    "slug": "dhanaraj",
+    "name": "DHANARAJ",
+    "season": "Kharif",
+    "category": "OP Paddy (Kharif)",
+    "type": "OP Paddy",
+    "duration": "140-145 Days",
+    "packaging": "6 Kg, 10 Kg, 25 Kg",
+    "shortDescription": "DHANARAJ paddy seed for Kharif season with 140-145 days crop maturity.",
+    "description": "DHANARAJ is an OP paddy seed variety processed and packed by SRABANI SEED FARM, Sabang, West Bengal. Thoroughly graded with attention to physical purity and seed quality for Kharif cultivation.",
+    "features": [
+      "Suitable for Kharif season cultivation",
+      "Crop maturity duration of 140-145 days",
+      "Graded physical purity",
+      "Quality processing and packaging by SRABANI SEED FARM"
+    ],
+    "specifications": {
+      "season": "Kharif Season",
+      "duration": "140-145 Days",
+      "category": "OP Paddy",
+      "packaging": "6 Kg, 10 Kg, 25 Kg",
+      "origin": "Sabang, Paschim Medinipur, West Bengal"
+    },
+    "images": [
+      {
+        "src": "assets/images/products/seed_packet_6.jpeg",
+        "alt": "DHANARAJ paddy seed packet"
       }
     ]
   },
