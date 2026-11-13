@@ -69,44 +69,8 @@
         },
         "mainEntity": {
           "@type": "ItemList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "item": {
-                "@type": "Product",
-                "name": "Pousami Gold Paddy Seed",
-                "url": "https://srabaniseedfarm.com/products.html#pousami-gold",
-                "image": "https://srabaniseedfarm.com/assets/images/products/pousami-gold-1.jpg",
-                "description": "Pousami Gold is a trusted high-yielding paddy seed variety cultivated and processed under strict quality controls at SRABANI SEED FARM in Sabang, West Bengal.",
-                "brand": { "@type": "Brand", "name": "SRABANI SEED FARM" }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "item": {
-                "@type": "Product",
-                "name": "Gobinda Bhog Paddy Seed",
-                "url": "https://srabaniseedfarm.com/products.html#gobinda-bhog",
-                "image": "https://srabaniseedfarm.com/assets/images/products/gobinda-bhog-1.jpg",
-                "description": "Gobinda Bhog is a famous traditional short-grain aromatic rice variety native to West Bengal, carefully dried and graded for pure seed lots.",
-                "brand": { "@type": "Brand", "name": "SRABANI SEED FARM" }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "item": {
-                "@type": "Product",
-                "name": "Badsha Bhog Paddy Seed",
-                "url": "https://srabaniseedfarm.com/products.html#badsha-bhog",
-                "image": "https://srabaniseedfarm.com/assets/images/products/badsha-bhog-1.jpg",
-                "description": "Badsha Bhog is a celebrated traditional scented paddy variety cultivated across Bengal, graded for uniform seed size and high germination.",
-                "brand": { "@type": "Brand", "name": "SRABANI SEED FARM" }
-              }
-            }
-          ]
+          "name": "Kharif and Boro Agricultural Paddy Seed Varieties",
+          "description": "Comprehensive seasonal catalog of certified and high-yielding OP and Improved paddy seed lots offered by SRABANI SEED FARM in Sabang, West Bengal."
         }
       }
     ]
@@ -238,7 +202,7 @@
   <main id="mainContent" class="section">
     <div class="container">
       <!-- Search & Catalog Info Bar -->
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 36px; padding-bottom: 20px; border-bottom: 1px solid var(--border-light);">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--border-light);">
         <div>
           <span id="productsCount" class="pill-badge pill-badge-gold">Loading Catalog...</span>
           <h2 style="font-size: 1.5rem; margin-top: 4px;">Paddy Seed Varieties</h2>
@@ -249,10 +213,19 @@
             type="search" 
             id="productSearchInput" 
             class="form-control" 
-            placeholder="Search variety (e.g. Pousami, Gobinda...)" 
+            placeholder="Search variety, duration, season..." 
             aria-label="Search paddy seed varieties"
           >
         </div>
+      </div>
+
+      <!-- Season & Category Filter Buttons -->
+      <div class="catalog-filter-bar" role="tablist" aria-label="Filter seed varieties by season or category">
+        <button type="button" class="filter-btn active" data-filter="all">All Varieties (65)</button>
+        <button type="button" class="filter-btn" data-filter="kharif">🌾 Kharif Season (40)</button>
+        <button type="button" class="filter-btn" data-filter="boro">☀️ Boro Season (25)</button>
+        <button type="button" class="filter-btn" data-filter="op">OP Paddy</button>
+        <button type="button" class="filter-btn" data-filter="improved">Improved Paddy</button>
       </div>
 
       <!-- Products Grid (Dynamically rendered from data/products.json via assets/js/products.js) -->
@@ -312,9 +285,10 @@
         <div>
           <h4 class="footer-col-title">Our Varieties</h4>
           <ul class="footer-links-list">
-            <li><a href="products.html#pousami-gold" class="footer-link">Pousami Gold Paddy</a></li>
-            <li><a href="products.html#gobinda-bhog" class="footer-link">Gobinda Bhog Paddy</a></li>
+            <li><a href="products.html?season=kharif" class="footer-link">Kharif Paddy Seeds</a></li>
+            <li><a href="products.html?season=boro" class="footer-link">Boro Paddy Seeds</a></li>
             <li><a href="products.html#badsha-bhog" class="footer-link">Badsha Bhog Paddy</a></li>
+            <li><a href="products.html#gobinda-bhog" class="footer-link">Gobinda Bhog Paddy</a></li>
           </ul>
         </div>
         <div>

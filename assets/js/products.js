@@ -1,18 +1,13 @@
 /**
- * SRABANI SEED FARM – Products Listing & Inline Expandable Details JavaScript
- * Dynamically loads products from data/products.json and renders them into the DOM.
- * Products expand inline on the products page without navigating away.
+ * SRABANI SEED FARM – Seasonal Products Listing & Inline Expandable Details
+ * Supports Kharif & Boro seasons, OP Paddy & Improved Paddy categories,
+ * with minimal common specifications, 4 general images, and instant search/filtering.
  */
 
 (function () {
   'use strict';
 
-  // Helper to determine relative path prefix to site root
-  function getPathPrefix() {
-    return '';
-  }
-
-  // Escape HTML helper
+  // Helper to escape HTML safely
   function escapeHtml(str) {
     if (!str) return '';
     return String(str).replace(/[&<>"']/g, function (m) {
@@ -26,26 +21,10 @@
     });
   }
 
-  // Format spec keys into human readable labels
-  function formatSpecLabel(key) {
-    const labels = {
-      seedType: 'Seed Type',
-      packaging: 'Packaging',
-      availability: 'Current Availability',
-      cropSeason: 'Sowing Season',
-      maturityDuration: 'Maturity Duration',
-      grainType: 'Grain Classification',
-      origin: 'Farm Origin'
-    };
-    if (labels[key]) return labels[key];
-    return key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
-  }
-
   // Fetch centralized products data
   async function fetchProducts() {
-    const dataUrl = 'data/products.json';
     try {
-      const response = await fetch(dataUrl);
+      const response = await fetch('data/products.json');
       if (!response.ok) {
         throw new Error(`Failed to load product data: ${response.status}`);
       }
@@ -58,10 +37,13 @@
 
   // Create card HTML for Featured Grid (Home Page)
   function createFeaturedCardHtml(product) {
-    const imageObj = (product.images && product.images.length > 0) ? product.images[0] : null;
-    const imgSrc = imageObj ? imageObj.src : 'assets/images/products/placeholder.svg';
-    const imgAlt = imageObj ? imageObj.alt : `${product.name} at SRABANI SEED FARM`;
+    const images = (product.images && product.images.length > 0) ? product.images : [
+      { src: 'assets/images/products/general-seed-1.jpg', alt: 'Paddy seed sample' }
+    ];
+    const imgSrc = images[0].src;
+    const imgAlt = images[0].alt;
     const targetUrl = `products.html#${encodeURIComponent(product.slug)}`;
+    const seasonClass = product.season ? `product-badge-${product.season.toLowerCase()}` : '';
 
     return `
       <article class="product-card" data-slug="${escapeHtml(product.slug)}">
@@ -76,14 +58,19 @@
               height="300"
             >
           </a>
-          <span class="product-card-badge">${escapeHtml(product.category || 'Paddy Seeds')}</span>
+          <span class="product-card-badge ${seasonClass}">${escapeHtml(product.season || 'Paddy')}</span>
+          ${product.type ? `<span class="product-type-pill">${escapeHtml(product.type)}</span>` : ''}
         </div>
         <div class="product-card-body">
           <h3 class="product-card-title">
             <a href="${targetUrl}">${escapeHtml(product.name)}</a>
           </h3>
+          <div class="product-meta-row">
+            ${product.duration ? `<span class="product-meta-chip">⏱ Duration: <strong>${escapeHtml(product.duration)}</strong></span>` : ''}
+            ${product.packaging ? `<span class="product-meta-chip">📦 Pack: <strong>${escapeHtml(product.packaging)}</strong></span>` : ''}
+          </div>
           <p class="product-card-desc">
-            ${escapeHtml(product.shortDescription || 'Quality paddy seed selected by SRABANI SEED FARM.')}
+            ${escapeHtml(product.shortDescription || 'Quality certified paddy seed from SRABANI SEED FARM.')}
           </p>
           <div class="product-card-footer">
             <span class="product-origin-label">Sabang, West Bengal</span>
@@ -98,86 +85,46 @@
 
   // Create card HTML for Full Catalog Grid (Products Page) with Inline Expandable Details
   function createCatalogCardHtml(product) {
-    const images = (product.images && product.images.length > 0) ? product.images : [{
-      src: 'assets/images/products/placeholder.svg',
-      alt: `${product.name} sample`
-    }];
+    const images = (product.images && product.images.length > 0) ? product.images : [
+      { src: 'assets/images/products/general-seed-1.jpg', alt: 'Paddy seed sample' },
+      { src: 'assets/images/products/general-seed-2.jpg', alt: 'Grain sample' },
+      { src: 'assets/images/products/general-seed-3.jpg', alt: 'Seed lot' },
+      { src: 'assets/images/products/general-seed-4.jpg', alt: 'Field tillers' }
+    ];
     const primaryImg = images[0];
     const cardId = `product-${product.slug}`;
     const detailsId = `details-${product.slug}`;
+    const seasonClass = product.season ? `product-badge-${product.season.toLowerCase()}` : '';
 
-    // Gallery thumbnails (if more than 1 image)
-    let galleryHtml = '';
-    if (images.length > 1) {
-      const thumbsHtml = images.map((img, idx) => `
-        <button 
-          type="button" 
-          class="product-gallery-thumb-btn ${idx === 0 ? 'active' : ''}" 
-          data-src="${escapeHtml(img.src)}" 
-          data-alt="${escapeHtml(img.alt)}" 
-          aria-label="View photo ${idx + 1} of ${images.length}"
-        >
-          <img src="${escapeHtml(img.src)}" alt="${escapeHtml(img.alt)}" class="product-gallery-thumb-img fallbackable" loading="lazy">
-        </button>
-      `).join('');
+    // Gallery thumbnails (all 4 general images)
+    const thumbsHtml = images.map((img, idx) => `
+      <button 
+        type="button" 
+        class="product-gallery-thumb-btn ${idx === 0 ? 'active' : ''}" 
+        data-src="${escapeHtml(img.src)}" 
+        data-alt="${escapeHtml(img.alt)}" 
+        aria-label="View photo ${idx + 1} of ${images.length}"
+      >
+        <img src="${escapeHtml(img.src)}" alt="${escapeHtml(img.alt)}" class="product-gallery-thumb-img fallbackable" loading="lazy">
+      </button>
+    `).join('');
 
-      galleryHtml = `
-        <div class="product-card-gallery">
-          <span class="product-gallery-label">Photos (${images.length}):</span>
-          <div class="product-gallery-thumbs" role="group" aria-label="Product photo gallery">
-            ${thumbsHtml}
-          </div>
+    const galleryHtml = `
+      <div class="product-card-gallery">
+        <span class="product-gallery-label">Seed Inspection Photos (4):</span>
+        <div class="product-gallery-thumbs" role="group" aria-label="Product photo gallery">
+          ${thumbsHtml}
         </div>
-      `;
-    }
-
-    // Features list
-    let featuresHtml = '';
-    if (product.features && product.features.length > 0) {
-      featuresHtml = `
-        <div class="product-features-wrap">
-          <h4 class="features-heading">Key Variety Features</h4>
-          <ul class="features-list">
-            ${product.features.map(f => `
-              <li class="feature-item">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                <span>${escapeHtml(f)}</span>
-              </li>
-            `).join('')}
-          </ul>
-        </div>
-      `;
-    }
-
-    // Specifications table
-    let specsHtml = '';
-    if (product.specifications && Object.keys(product.specifications).length > 0) {
-      const specRows = Object.entries(product.specifications).map(([key, val]) => `
-        <tr>
-          <th scope="row">${escapeHtml(formatSpecLabel(key))}</th>
-          <td>${escapeHtml(val)}</td>
-        </tr>
-      `).join('');
-
-      specsHtml = `
-        <div class="product-specs-wrap">
-          <h4 class="product-detail-subheading">Seed Specifications</h4>
-          <table class="specs-table">
-            <tbody>
-              ${specRows}
-            </tbody>
-          </table>
-        </div>
-      `;
-    }
+      </div>
+    `;
 
     // WhatsApp pre-filled text
-    const waText = `Hello SRABANI SEED FARM, I would like to inquire about seed availability, packaging, and pricing for: ${product.name}.`;
+    const waText = `Hello SRABANI SEED FARM, I would like to inquire about ${product.name} (${product.season} Season, Duration: ${product.duration}, Packaging: ${product.packaging}).`;
     const waUrl = `https://wa.me/919932442449?text=${encodeURIComponent(waText)}`;
     const onlineInquireUrl = `contact.html?product=${encodeURIComponent(product.name)}`;
 
     return `
-      <article class="product-card" id="${escapeHtml(cardId)}" data-slug="${escapeHtml(product.slug)}">
+      <article class="product-card" id="${escapeHtml(cardId)}" data-slug="${escapeHtml(product.slug)}" data-season="${escapeHtml((product.season || '').toLowerCase())}" data-type="${escapeHtml((product.type || '').toLowerCase())}">
         <div class="product-card-img-wrap">
           <img 
             src="${escapeHtml(primaryImg.src)}" 
@@ -187,7 +134,8 @@
             width="400" 
             height="300"
           >
-          <span class="product-card-badge">${escapeHtml(product.category || 'Paddy Seeds')}</span>
+          <span class="product-card-badge ${seasonClass}">${escapeHtml(product.season || 'Paddy')}</span>
+          ${product.type ? `<span class="product-type-pill">${escapeHtml(product.type)}</span>` : ''}
         </div>
 
         <div class="product-card-body">
@@ -196,8 +144,14 @@
               ${escapeHtml(product.name)}
             </a>
           </h3>
+
+          <div class="product-meta-row">
+            <span class="product-meta-chip">⏱ Duration: <strong>${escapeHtml(product.duration || 'Standard')}</strong></span>
+            <span class="product-meta-chip">📦 Pack: <strong>${escapeHtml(product.packaging || 'Available')}</strong></span>
+          </div>
+
           <p class="product-card-desc">
-            ${escapeHtml(product.shortDescription || 'High-purity agricultural paddy seed.')}
+            ${escapeHtml(product.shortDescription || 'Graded agricultural paddy seed lot processed at Sabang.')}
           </p>
 
           <div class="product-card-footer">
@@ -218,21 +172,63 @@
           <div class="product-card-details" id="${escapeHtml(detailsId)}" hidden>
             ${galleryHtml}
 
-            <div class="product-detail-block">
-              <h4 class="product-detail-subheading">About Variety</h4>
-              <p class="product-detail-text">
-                ${escapeHtml(product.description || product.shortDescription || '')}
-              </p>
+            <!-- Minimal Specifications Table -->
+            <div class="product-specs-wrap">
+              <h4 class="product-detail-subheading">Variety Specifications</h4>
+              <table class="specs-table">
+                <tbody>
+                  <tr>
+                    <th scope="row">Crop Season</th>
+                    <td><strong>${escapeHtml(product.season || 'Kharif / Boro')}</strong></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Crop Duration</th>
+                    <td><strong>${escapeHtml(product.duration || 'N/A')}</strong></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Seed Classification</th>
+                    <td>${escapeHtml(product.type || 'Paddy Seed')}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Available Packaging</th>
+                    <td>${escapeHtml(product.packaging || 'Standard bags')}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Quality Standard</th>
+                    <td>Cleaned, physically graded, high germination vitality</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Farm Processing</th>
+                    <td>SRABANI SEED FARM, Sabang, West Bengal</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
-            ${featuresHtml}
+            <!-- Minimal Variety Highlights -->
+            <div class="product-features-wrap">
+              <h4 class="features-heading">Key Variety Features</h4>
+              <ul class="features-list">
+                <li class="feature-item">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                  <span>Matures reliably within <strong>${escapeHtml(product.duration)}</strong> for ${escapeHtml(product.season)} season.</span>
+                </li>
+                <li class="feature-item">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                  <span>Graded to remove inert matter and chaff for uniform germination.</span>
+                </li>
+                <li class="feature-item">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                  <span>Supplied in genuine farm-sealed packs directly from Sabang facility.</span>
+                </li>
+              </ul>
+            </div>
 
-            ${specsHtml}
-
+            <!-- Action CTAs -->
             <div class="product-card-actions">
               <div class="product-card-actions-row">
                 <a href="${waUrl}" class="btn btn-sm btn-whatsapp" target="_blank" rel="noopener noreferrer">
-                  💬 WhatsApp Farm
+                  💬 WhatsApp Inquiry
                 </a>
                 <a href="${onlineInquireUrl}" class="btn btn-sm btn-primary">
                   ✉ Inquire Online
@@ -243,6 +239,7 @@
               </a>
             </div>
 
+            <!-- Collapse Trigger -->
             <div class="product-card-collapse-wrap">
               <button 
                 type="button" 
@@ -289,7 +286,6 @@
 
   // Attach interactive events to products grid
   function attachGridEvents(productsGrid) {
-    // 1. Expand / Collapse Button & Title click delegation
     productsGrid.addEventListener('click', function (e) {
       // Toggle button
       const expandBtn = e.target.closest('.product-expand-btn');
@@ -315,12 +311,11 @@
         e.preventDefault();
         const card = collapseBtn.closest('.product-card');
         toggleCard(card, false);
-        // Scroll card gently into view if user was scrolled down inside details
         card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         return;
       }
 
-      // Gallery thumbnail click
+      // Photo gallery thumbnail click
       const thumbBtn = e.target.closest('.product-gallery-thumb-btn');
       if (thumbBtn) {
         e.preventDefault();
@@ -330,7 +325,7 @@
         const newAlt = thumbBtn.getAttribute('data-alt');
 
         if (mainImg && newSrc) {
-          mainImg.style.opacity = '0.4';
+          mainImg.style.opacity = '0.35';
           setTimeout(() => {
             mainImg.src = newSrc;
             if (newAlt) mainImg.alt = newAlt;
@@ -338,7 +333,6 @@
           }, 120);
         }
 
-        // Update active thumbnail
         const thumbs = card.querySelectorAll('.product-gallery-thumb-btn');
         thumbs.forEach(t => t.classList.remove('active'));
         thumbBtn.classList.add('active');
@@ -347,7 +341,7 @@
     });
   }
 
-  // Handle URL hash or search parameter navigation (e.g. products.html#pousami-gold)
+  // Handle URL hash or search parameter navigation (e.g. products.html#gobinda-bhog)
   function handleUrlTarget() {
     const hash = window.location.hash.replace('#', '').trim();
     const urlParams = new URLSearchParams(window.location.search);
@@ -374,6 +368,7 @@
     const featuredGrid = document.getElementById('featuredProductsGrid');
     const searchInput = document.getElementById('productSearchInput');
     const countBadge = document.getElementById('productsCount');
+    const filterButtons = document.querySelectorAll('.catalog-filter-bar .filter-btn');
 
     if (!productsGrid && !featuredGrid) return;
 
@@ -401,40 +396,83 @@
     if (productsGrid) {
       attachGridEvents(productsGrid);
 
-      function renderList(list) {
-        if (list.length === 0) {
-          productsGrid.innerHTML = `
-            <div style="grid-column: 1 / -1; text-align: center; padding: 40px;">
-              <p>No paddy seed varieties matched your search. Try searching "Pousami", "Gobinda", or "Badsha".</p>
-            </div>
-          `;
-        } else {
-          productsGrid.innerHTML = list.map(p => createCatalogCardHtml(p)).join('');
-        }
-        if (countBadge) {
-          countBadge.textContent = `${list.length} Variet${list.length === 1 ? 'y' : 'ies'} Available`;
-        }
-      }
+      let currentFilter = 'all';
+      let currentQuery = '';
 
-      renderList(products);
-
-      // Search Filter
-      if (searchInput) {
-        searchInput.addEventListener('input', function (e) {
-          const query = e.target.value.toLowerCase().trim();
-          const filtered = products.filter(p => {
-            const nameMatch = p.name && p.name.toLowerCase().includes(query);
-            const shortMatch = p.shortDescription && p.shortDescription.toLowerCase().includes(query);
-            const descMatch = p.description && p.description.toLowerCase().includes(query);
-            const catMatch = p.category && p.category.toLowerCase().includes(query);
-            const featureMatch = p.features && p.features.some(f => f.toLowerCase().includes(query));
-            return nameMatch || shortMatch || descMatch || catMatch || featureMatch;
-          });
-          renderList(filtered);
+      // Check URL search param for initial season filter (e.g. ?season=kharif or ?season=boro)
+      const urlParams = new URLSearchParams(window.location.search);
+      const seasonParam = urlParams.get('season');
+      if (seasonParam && (seasonParam.toLowerCase() === 'kharif' || seasonParam.toLowerCase() === 'boro')) {
+        currentFilter = seasonParam.toLowerCase();
+        filterButtons.forEach(btn => {
+          if (btn.getAttribute('data-filter') === currentFilter) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
         });
       }
 
-      // Check URL hash immediately and listen for changes
+      function applyFilters() {
+        const filtered = products.filter(p => {
+          // Season / Category filter
+          if (currentFilter === 'kharif' && (p.season || '').toLowerCase() !== 'kharif') return false;
+          if (currentFilter === 'boro' && (p.season || '').toLowerCase() !== 'boro') return false;
+          if (currentFilter === 'op' && !(p.type || '').toLowerCase().includes('op')) return false;
+          if (currentFilter === 'improved' && !(p.type || '').toLowerCase().includes('improved')) return false;
+
+          // Search text filter
+          if (currentQuery) {
+            const nameMatch = p.name && p.name.toLowerCase().includes(currentQuery);
+            const durationMatch = p.duration && p.duration.toLowerCase().includes(currentQuery);
+            const seasonMatch = p.season && p.season.toLowerCase().includes(currentQuery);
+            const typeMatch = p.type && p.type.toLowerCase().includes(currentQuery);
+            const packMatch = p.packaging && p.packaging.toLowerCase().includes(currentQuery);
+            return nameMatch || durationMatch || seasonMatch || typeMatch || packMatch;
+          }
+          return true;
+        });
+
+        if (filtered.length === 0) {
+          productsGrid.innerHTML = `
+            <div style="grid-column: 1 / -1; text-align: center; padding: 40px; background: var(--bg-alt); border-radius: var(--radius-md); border: 1px dashed var(--border-light);">
+              <p style="margin-bottom: 8px; font-weight: 600; color: var(--dark-text);">No seed varieties found matching your filter.</p>
+              <p style="font-size: 0.9rem; color: var(--muted-text);">Try searching for variety names like "MTU-7029", "Santoshi", "Gobinda Bhog", "Shyamashree", or clear the filter.</p>
+            </div>
+          `;
+        } else {
+          productsGrid.innerHTML = filtered.map(p => createCatalogCardHtml(p)).join('');
+        }
+
+        if (countBadge) {
+          countBadge.textContent = `${filtered.length} Variet${filtered.length === 1 ? 'y' : 'ies'} Available`;
+        }
+      }
+
+      // Initial render
+      applyFilters();
+
+      // Search input listener
+      if (searchInput) {
+        searchInput.addEventListener('input', function (e) {
+          currentQuery = e.target.value.toLowerCase().trim();
+          applyFilters();
+        });
+      }
+
+      // Filter buttons listener
+      if (filterButtons.length > 0) {
+        filterButtons.forEach(btn => {
+          btn.addEventListener('click', function () {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentFilter = btn.getAttribute('data-filter') || 'all';
+            applyFilters();
+          });
+        });
+      }
+
+      // Handle deep links (hash navigation)
       handleUrlTarget();
       window.addEventListener('hashchange', handleUrlTarget);
     }

@@ -1056,6 +1056,95 @@ p:last-child {
   border-radius: var(--radius-sm);
   backdrop-filter: blur(4px);
   box-shadow: var(--shadow-sm);
+  z-index: 2;
+}
+
+.product-card-badge.product-badge-kharif {
+  background-color: #15803D;
+  color: #FFFFFF;
+  border-color: #15803D;
+}
+
+.product-card-badge.product-badge-boro {
+  background-color: #B45309;
+  color: #FFFFFF;
+  border-color: #B45309;
+}
+
+.product-type-pill {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--dark-text);
+  border: 1px solid var(--border-light);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(4px);
+  box-shadow: var(--shadow-sm);
+  z-index: 2;
+}
+
+.product-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.product-meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border-light);
+  color: var(--dark-text);
+  padding: 3px 9px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+}
+
+.product-meta-chip strong {
+  color: var(--primary-green);
+  font-weight: 700;
+}
+
+/* Season & Category Filter Bar */
+.catalog-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 26px;
+  align-items: center;
+}
+
+.filter-btn {
+  background-color: var(--white);
+  color: var(--body-text);
+  border: 1.5px solid var(--border-light);
+  padding: 7px 15px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+}
+
+.filter-btn.active {
+  background-color: var(--primary-green);
+  color: var(--white);
+  border-color: var(--primary-green);
+  box-shadow: 0 2px 8px rgba(21, 128, 61, 0.25);
 }
 
 .product-card-body {
