@@ -6,7 +6,7 @@
 (function () {
   'use strict';
 
-  // Helper to dynamically update or inject Product Schema on dynamic product-details page
+  // Helper to dynamically update or inject Product Schema
   function updateProductSchema(product) {
     if (!product) return;
 

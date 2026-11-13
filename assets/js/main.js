@@ -60,8 +60,6 @@
 
       if (currentFile === linkFile || (currentFile === '' && linkFile === 'index.html')) {
         link.classList.add('active');
-      } else if (currentPath.includes('/products/') && href.includes('products')) {
-        link.classList.add('active');
       }
     });
   }
@@ -80,10 +78,7 @@
     // When any product image fails to load, swap with placeholder SVG
     document.addEventListener('error', function (e) {
       if (e.target && e.target.tagName === 'IMG' && e.target.classList.contains('fallbackable')) {
-        // Find relative path to placeholder
-        const depth = (window.location.pathname.match(/\//g) || []).length;
-        const prefix = window.location.pathname.includes('/products/') ? '../../' : '';
-        e.target.src = prefix + 'assets/images/products/placeholder.svg';
+        e.target.src = 'assets/images/products/placeholder.svg';
         e.target.alt = 'SRABANI SEED FARM – Image sample placeholder';
       }
     }, true);

@@ -43,8 +43,7 @@ Built strictly using:
 ```text
 /
 ├── index.html                       # Home Page (Hero, Highlights, Featured, Why Us, CTA)
-├── products.html                    # Product Catalog (Search & Category Filter)
-├── product-details.html             # Reusable Dynamic Product Details (?slug=...)
+├── products.html                    # Product Catalog with Inline Expandable Details
 ├── about.html                       # About Us (Story, Mission, Vision, Commitments)
 ├── contact.html                     # Contact Us (Cards, Map, Validated Inquiry Form)
 ├── 404.html                         # Custom Agricultural 404 Page
@@ -56,27 +55,18 @@ Built strictly using:
 ├── data/
 │   └── products.json                # Centralized Product Data (Single Source of Truth)
 │
-├── products/                        # Static SEO Landing Pages for Crawlers
-│   ├── pousami-gold/
-│   │   └── index.html
-│   ├── gobinda-bhog/
-│   │   └── index.html
-│   └── badsha-bhog/
-│       └── index.html
-│
 └── assets/
     ├── css/
     │   ├── style.css                # Base Styles, Typography, Components, Theme
     │   └── responsive.css           # Media Queries (1024px, 768px, 480px, Print)
     ├── js/
     │   ├── main.js                  # Navigation, Mobile Drawer, Form Validation
-    │   ├── products.js              # Product Catalog Fetcher & Search Filter
-    │   ├── product-details.js       # Dynamic Details Page, Carousel & Related Seeds
+    │   ├── products.js              # Product Catalog, Inline Accordion Expansion, Search Filter
     │   └── seo.js                   # Client-side Schema and SEO Helpers
     └── images/
         ├── logo.png                 # Vector Brand Logo (Wheat/Paddy motif)
-        ├── logo.png              # Vector Favicon (Leaf & Paddy Shield)
-        ├── logo.png             # 1200x630 OpenGraph / Social Share Banner
+        ├── logo.png                 # Vector Favicon (Leaf & Paddy Shield)
+        ├── logo.png                 # 1200x630 OpenGraph / Social Share Banner
         ├── hero/
         │   └── hero-bg.jpg          # Green Paddy Field Backdrop
         ├── about/
@@ -107,9 +97,9 @@ Built strictly using:
    - `LocalBusiness`: Exact Sabang address, telephone numbers, geo-coordinates.
    - `WebSite`: Publisher reference.
    - `BreadcrumbList`: Implemented across all pages for breadcrumb rich snippets.
-   - `Product`: Integrated on product pages (both dynamic and static SEO versions).
-4. **Static SEO Pages (Requirement 10.E):**
-   - Independent HTML files at `products/{slug}/index.html` provide full pre-rendered HTML content and schema to guarantee 100% Googlebot indexing without waiting for client-side JavaScript execution.
+   - `ItemList & Product`: Integrated on `products.html` for complete seed catalog indexing.
+4. **Interactive Inline Expansion:**
+   - Product details expand smoothly inline within the product catalog page (`products.html`), with gallery photo switching, features lists, specifications tables, direct WhatsApp integration, and URL hash routing (`#pousami-gold`, etc.).
 
 ---
 
@@ -149,8 +139,7 @@ Edit `data/products.json`. Each product follows this standard JSON structure:
 ### B. Adding a New Product Variety
 1. Add a new product object to the array in `data/products.json`.
 2. Add the corresponding images (e.g. `assets/images/products/new-variety-1.jpg`).
-3. Create the static SEO page directory `products/{slug}/index.html` (copying one of the existing static templates) to ensure direct search engine indexing.
-4. Add the new static URL to `sitemap.xml`.
+3. The variety automatically appears in the catalog on `products.html` with full expandable details and search support.
 
 ### C. Replacing Images
 1. Save high-resolution photography in `assets/images/products/` (recommended ratio: 4:3, e.g. 800x600 or 1200x900, WebP or JPG).
