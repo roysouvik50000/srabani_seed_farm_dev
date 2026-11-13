@@ -38,7 +38,7 @@
   // Create card HTML for Featured Grid (Home Page)
   function createFeaturedCardHtml(product) {
     const images = (product.images && product.images.length > 0) ? product.images : [
-      { src: 'assets/images/products/general-seed-1.jpg', alt: 'Paddy seed sample' }
+      { src: 'assets/images/products/seed_packet_1.jpeg', alt: 'Paddy seed packet' }
     ];
     const imgSrc = images[0].src;
     const imgAlt = images[0].alt;
@@ -86,17 +86,16 @@
   // Create card HTML for Full Catalog Grid (Products Page) with Inline Expandable Details
   function createCatalogCardHtml(product) {
     const images = (product.images && product.images.length > 0) ? product.images : [
-      { src: 'assets/images/products/general-seed-1.jpg', alt: 'Paddy seed sample' },
-      { src: 'assets/images/products/general-seed-2.jpg', alt: 'Grain sample' },
-      { src: 'assets/images/products/general-seed-3.jpg', alt: 'Seed lot' },
-      { src: 'assets/images/products/general-seed-4.jpg', alt: 'Field tillers' }
+      { src: 'assets/images/products/seed_packet_1.jpeg', alt: 'Paddy seed packet' },
+      { src: 'assets/images/products/seed_packet_2.jpeg', alt: 'Paddy seed packet' },
+      { src: 'assets/images/products/seed_packet_3.jpeg', alt: 'Paddy seed packet' }
     ];
     const primaryImg = images[0];
     const cardId = `product-${product.slug}`;
     const detailsId = `details-${product.slug}`;
     const seasonClass = product.season ? `product-badge-${product.season.toLowerCase()}` : '';
 
-    // Gallery thumbnails (all 4 general images)
+    // Gallery thumbnails (random seed packet photos)
     const thumbsHtml = images.map((img, idx) => `
       <button 
         type="button" 
@@ -111,7 +110,7 @@
 
     const galleryHtml = `
       <div class="product-card-gallery">
-        <span class="product-gallery-label">Seed Inspection Photos (4):</span>
+        <span class="product-gallery-label">Seed Packet Photos (${images.length}):</span>
         <div class="product-gallery-thumbs" role="group" aria-label="Product photo gallery">
           ${thumbsHtml}
         </div>
