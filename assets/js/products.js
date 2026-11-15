@@ -367,7 +367,8 @@
     const featuredGrid = document.getElementById('featuredProductsGrid');
     const searchInput = document.getElementById('productSearchInput');
     const countBadge = document.getElementById('productsCount');
-    const filterButtons = document.querySelectorAll('.catalog-filter-bar .filter-btn');
+    const seasonButtons = document.querySelectorAll('.filter-btn[data-group="season"]');
+    const typeButtons = document.querySelectorAll('.filter-btn[data-group="type"]');
 
     if (!productsGrid && !featuredGrid) return;
 
@@ -395,30 +396,66 @@
     if (productsGrid) {
       attachGridEvents(productsGrid);
 
-      let currentFilter = 'all';
+      // Default state: Kharif season + OP Paddy
+      let currentSeason = 'kharif';
+      let currentType = 'op';
       let currentQuery = '';
 
-      // Check URL search param for initial season filter (e.g. ?season=kharif or ?season=boro)
+      // Check URL parameters & hash target for initial filter alignment
       const urlParams = new URLSearchParams(window.location.search);
       const seasonParam = urlParams.get('season');
-      if (seasonParam && (seasonParam.toLowerCase() === 'kharif' || seasonParam.toLowerCase() === 'boro')) {
-        currentFilter = seasonParam.toLowerCase();
-        filterButtons.forEach(btn => {
-          if (btn.getAttribute('data-filter') === currentFilter) {
-            btn.classList.add('active');
-          } else {
-            btn.classList.remove('active');
+      const typeParam = urlParams.get('type') || urlParams.get('category');
+      const hash = window.location.hash.replace('#', '').trim();
+      const targetSlug = hash || urlParams.get('slug') || urlParams.get('product');
+
+      if (targetSlug) {
+        const targetProduct = products.find(p => p.slug === targetSlug || p.id === targetSlug);
+        if (targetProduct) {
+          if (targetProduct.season) {
+            currentSeason = targetProduct.season.toLowerCase();
           }
+          if (targetProduct.type) {
+            currentType = targetProduct.type.toLowerCase().includes('improved') ? 'improved' : 'op';
+          }
+        }
+      } else {
+        if (seasonParam && (seasonParam.toLowerCase() === 'kharif' || seasonParam.toLowerCase() === 'boro')) {
+          currentSeason = seasonParam.toLowerCase();
+        }
+        if (typeParam) {
+          const t = typeParam.toLowerCase();
+          if (t.includes('improved')) currentType = 'improved';
+          else if (t.includes('op')) currentType = 'op';
+        }
+      }
+
+      function updateButtonStates() {
+        seasonButtons.forEach(btn => {
+          const val = btn.getAttribute('data-value');
+          const isActive = (val === currentSeason);
+          btn.classList.toggle('active', isActive);
+          btn.setAttribute('aria-checked', isActive ? 'true' : 'false');
+        });
+        typeButtons.forEach(btn => {
+          const val = btn.getAttribute('data-value');
+          const isActive = (val === currentType);
+          btn.classList.toggle('active', isActive);
+          btn.setAttribute('aria-checked', isActive ? 'true' : 'false');
         });
       }
 
       function applyFilters() {
+        updateButtonStates();
+
         const filtered = products.filter(p => {
-          // Season / Category filter
-          if (currentFilter === 'kharif' && (p.season || '').toLowerCase() !== 'kharif') return false;
-          if (currentFilter === 'boro' && (p.season || '').toLowerCase() !== 'boro') return false;
-          if (currentFilter === 'op' && !(p.type || '').toLowerCase().includes('op')) return false;
-          if (currentFilter === 'improved' && !(p.type || '').toLowerCase().includes('improved')) return false;
+          // Season filter: kharif or boro
+          const pSeason = (p.season || '').toLowerCase();
+          if (pSeason !== currentSeason) return false;
+
+          // Type filter: op or improved
+          const pType = (p.type || '').toLowerCase();
+          if (currentType === 'op' && !pType.includes('op')) return false;
+          if (currentType === 'improved' && !pType.includes('improved')) return false;
 
           // Search text filter
           if (currentQuery) {
@@ -435,8 +472,8 @@
         if (filtered.length === 0) {
           productsGrid.innerHTML = `
             <div style="grid-column: 1 / -1; text-align: center; padding: 40px; background: var(--bg-alt); border-radius: var(--radius-md); border: 1px dashed var(--border-light);">
-              <p style="margin-bottom: 8px; font-weight: 600; color: var(--dark-text);">No seed varieties found matching your filter.</p>
-              <p style="font-size: 0.9rem; color: var(--muted-text);">Try searching for variety names like "MTU-7029", "Santoshi", "Gobinda Bhog", "Shyamashree", or clear the filter.</p>
+              <p style="margin-bottom: 8px; font-weight: 600; color: var(--dark-text);">No seed varieties found matching "${escapeHtml(currentQuery)}" in ${currentSeason === 'kharif' ? 'Kharif' : 'Boro'} (${currentType === 'op' ? 'OP Paddy' : 'Improved Paddy'}).</p>
+              <p style="font-size: 0.9rem; color: var(--muted-text);">Try clearing your search or switching to another season or variety type above.</p>
             </div>
           `;
         } else {
@@ -444,7 +481,9 @@
         }
 
         if (countBadge) {
-          countBadge.textContent = `${filtered.length} Variet${filtered.length === 1 ? 'y' : 'ies'} Available`;
+          const seasonLabel = currentSeason === 'kharif' ? 'Kharif' : 'Boro';
+          const typeLabel = currentType === 'op' ? 'OP Paddy' : 'Improved Paddy';
+          countBadge.textContent = `${filtered.length} Variet${filtered.length === 1 ? 'y' : 'ies'} (${seasonLabel} • ${typeLabel})`;
         }
       }
 
@@ -459,21 +498,42 @@
         });
       }
 
-      // Filter buttons listener
-      if (filterButtons.length > 0) {
-        filterButtons.forEach(btn => {
-          btn.addEventListener('click', function () {
-            filterButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            currentFilter = btn.getAttribute('data-filter') || 'all';
+      // Season filter buttons listener (Kharif or Boro)
+      seasonButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const val = btn.getAttribute('data-value');
+          if (val && val !== currentSeason) {
+            currentSeason = val;
             applyFilters();
-          });
+          }
         });
-      }
+      });
+
+      // Type filter buttons listener (OP or Improved)
+      typeButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const val = btn.getAttribute('data-value');
+          if (val && val !== currentType) {
+            currentType = val;
+            applyFilters();
+          }
+        });
+      });
 
       // Handle deep links (hash navigation)
       handleUrlTarget();
-      window.addEventListener('hashchange', handleUrlTarget);
+      window.addEventListener('hashchange', function () {
+        const newHash = window.location.hash.replace('#', '').trim();
+        if (newHash) {
+          const targetProduct = products.find(p => p.slug === newHash || p.id === newHash);
+          if (targetProduct) {
+            if (targetProduct.season) currentSeason = targetProduct.season.toLowerCase();
+            if (targetProduct.type) currentType = targetProduct.type.toLowerCase().includes('improved') ? 'improved' : 'op';
+            applyFilters();
+          }
+        }
+        handleUrlTarget();
+      });
     }
   }
 
