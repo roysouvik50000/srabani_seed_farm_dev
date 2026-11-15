@@ -39,16 +39,16 @@
     ]
   },
   {
-    "id": "rajendra-masuri-pratikha",
-    "slug": "rajendra-masuri-pratikha",
-    "name": "RAJENDRA MASURI / PRATIKHA",
+    "id": "rajendra-masuri",
+    "slug": "rajendra-masuri",
+    "name": "RAJENDRA MASURI",
     "season": "Kharif",
     "category": "OP Paddy (Kharif)",
     "type": "OP Paddy",
     "duration": "140-145 Days",
     "packaging": "6 Kg, 10 Kg, 25 Kg",
-    "shortDescription": "RAJENDRA MASURI / PRATIKHA paddy seed for Kharif season with 140-145 Days crop maturity.",
-    "description": "RAJENDRA MASURI / PRATIKHA is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
+    "shortDescription": "RAJENDRA MASURI paddy seed for Kharif season with 140-145 Days crop maturity.",
+    "description": "RAJENDRA MASURI is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
     "features": [
       "Optimal Kharif season crop cycle (140-145 Days)",
       "Graded physical purity with minimal chaff and weed seeds",
@@ -65,15 +65,54 @@
     "images": [
       {
         "src": "assets/images/products/seed_packet_5.jpeg",
-        "alt": "RAJENDRA MASURI / PRATIKHA SRABANI SEED FARM seed packet"
+        "alt": "RAJENDRA MASURI SRABANI SEED FARM seed packet"
       },
       {
         "src": "assets/images/products/seed_packet_7.jpeg",
-        "alt": "RAJENDRA MASURI / PRATIKHA SRABANI SEED FARM seed packet"
+        "alt": "RAJENDRA MASURI SRABANI SEED FARM seed packet"
       },
       {
         "src": "assets/images/products/seed_packet_6.jpeg",
-        "alt": "RAJENDRA MASURI / PRATIKHA SRABANI SEED FARM seed packet"
+        "alt": "RAJENDRA MASURI SRABANI SEED FARM seed packet"
+      }
+    ]
+  },
+  {
+    "id": "pratikha",
+    "slug": "pratikha",
+    "name": "PRATIKHA",
+    "season": "Kharif",
+    "category": "OP Paddy (Kharif)",
+    "type": "OP Paddy",
+    "duration": "140-145 Days",
+    "packaging": "6 Kg, 10 Kg, 25 Kg",
+    "shortDescription": "PRATIKHA paddy seed for Kharif season with 140-145 Days crop maturity.",
+    "description": "PRATIKHA is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
+    "features": [
+      "Optimal Kharif season crop cycle (140-145 Days)",
+      "Graded physical purity with minimal chaff and weed seeds",
+      "High germination capacity and vigorous seedling emergence",
+      "Directly processed and packed by SRABANI SEED FARM, Sabang"
+    ],
+    "specifications": {
+      "season": "Kharif Season",
+      "duration": "140-145 Days",
+      "category": "OP Paddy",
+      "packaging": "6 Kg, 10 Kg, 25 Kg",
+      "origin": "Sabang, Paschim Medinipur, West Bengal"
+    },
+    "images": [
+      {
+        "src": "assets/images/products/seed_packet_5.jpeg",
+        "alt": "PRATIKHA SRABANI SEED FARM seed packet"
+      },
+      {
+        "src": "assets/images/products/seed_packet_7.jpeg",
+        "alt": "PRATIKHA SRABANI SEED FARM seed packet"
+      },
+      {
+        "src": "assets/images/products/seed_packet_6.jpeg",
+        "alt": "PRATIKHA SRABANI SEED FARM seed packet"
       }
     ]
   },
@@ -171,16 +210,16 @@
     ]
   },
   {
-    "id": "cr-1017-cr-1018",
-    "slug": "cr-1017-cr-1018",
-    "name": "CR-1017 / CR-1018",
+    "id": "cr-1017",
+    "slug": "cr-1017",
+    "name": "CR-1017",
     "season": "Kharif",
     "category": "OP Paddy (Kharif)",
     "type": "OP Paddy",
     "duration": "150-155 Days",
     "packaging": "6 Kg, 10 Kg, 25 Kg",
-    "shortDescription": "CR-1017 / CR-1018 paddy seed for Kharif season with 150-155 Days crop maturity.",
-    "description": "CR-1017 / CR-1018 is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
+    "shortDescription": "CR-1017 paddy seed for Kharif season with 150-155 Days crop maturity.",
+    "description": "CR-1017 is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
     "features": [
       "Optimal Kharif season crop cycle (150-155 Days)",
       "Graded physical purity with minimal chaff and weed seeds",
@@ -197,15 +236,54 @@
     "images": [
       {
         "src": "assets/images/products/seed_packet_3.jpeg",
-        "alt": "CR-1017 / CR-1018 SRABANI SEED FARM seed packet"
+        "alt": "CR-1017 SRABANI SEED FARM seed packet"
       },
       {
         "src": "assets/images/products/seed_packet_2.jpeg",
-        "alt": "CR-1017 / CR-1018 SRABANI SEED FARM seed packet"
+        "alt": "CR-1017 SRABANI SEED FARM seed packet"
       },
       {
         "src": "assets/images/products/seed_packet_9.jpeg",
-        "alt": "CR-1017 / CR-1018 SRABANI SEED FARM seed packet"
+        "alt": "CR-1017 SRABANI SEED FARM seed packet"
+      }
+    ]
+  },
+  {
+    "id": "cr-1018",
+    "slug": "cr-1018",
+    "name": "CR-1018",
+    "season": "Kharif",
+    "category": "OP Paddy (Kharif)",
+    "type": "OP Paddy",
+    "duration": "150-155 Days",
+    "packaging": "6 Kg, 10 Kg, 25 Kg",
+    "shortDescription": "CR-1018 paddy seed for Kharif season with 150-155 Days crop maturity.",
+    "description": "CR-1018 is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
+    "features": [
+      "Optimal Kharif season crop cycle (150-155 Days)",
+      "Graded physical purity with minimal chaff and weed seeds",
+      "High germination capacity and vigorous seedling emergence",
+      "Directly processed and packed by SRABANI SEED FARM, Sabang"
+    ],
+    "specifications": {
+      "season": "Kharif Season",
+      "duration": "150-155 Days",
+      "category": "OP Paddy",
+      "packaging": "6 Kg, 10 Kg, 25 Kg",
+      "origin": "Sabang, Paschim Medinipur, West Bengal"
+    },
+    "images": [
+      {
+        "src": "assets/images/products/seed_packet_3.jpeg",
+        "alt": "CR-1018 SRABANI SEED FARM seed packet"
+      },
+      {
+        "src": "assets/images/products/seed_packet_2.jpeg",
+        "alt": "CR-1018 SRABANI SEED FARM seed packet"
+      },
+      {
+        "src": "assets/images/products/seed_packet_9.jpeg",
+        "alt": "CR-1018 SRABANI SEED FARM seed packet"
       }
     ]
   },
@@ -288,16 +366,16 @@
     ]
   },
   {
-    "id": "nc-kolma-kala-champa-bihari-panni",
-    "slug": "nc-kolma-kala-champa-bihari-panni",
-    "name": "NC-KOLMA / KALA CHAMPA / BIHARI PANNI",
+    "id": "nc-kolma",
+    "slug": "nc-kolma",
+    "name": "NC-KOLMA",
     "season": "Kharif",
     "category": "OP Paddy (Kharif)",
     "type": "OP Paddy",
     "duration": "150-155 Days",
     "packaging": "6 Kg, 10 Kg, 25 Kg",
-    "shortDescription": "NC-KOLMA / KALA CHAMPA / BIHARI PANNI paddy seed for Kharif season with 150-155 Days crop maturity.",
-    "description": "NC-KOLMA / KALA CHAMPA / BIHARI PANNI is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
+    "shortDescription": "NC-KOLMA paddy seed for Kharif season with 150-155 Days crop maturity.",
+    "description": "NC-KOLMA is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
     "features": [
       "Optimal Kharif season crop cycle (150-155 Days)",
       "Graded physical purity with minimal chaff and weed seeds",
@@ -314,29 +392,107 @@
     "images": [
       {
         "src": "assets/images/products/seed_packet_8.jpeg",
-        "alt": "NC-KOLMA / KALA CHAMPA / BIHARI PANNI SRABANI SEED FARM seed packet"
+        "alt": "NC-KOLMA SRABANI SEED FARM seed packet"
       },
       {
         "src": "assets/images/products/seed_packet_4.jpeg",
-        "alt": "NC-KOLMA / KALA CHAMPA / BIHARI PANNI SRABANI SEED FARM seed packet"
+        "alt": "NC-KOLMA SRABANI SEED FARM seed packet"
       },
       {
         "src": "assets/images/products/seed_packet_1.jpeg",
-        "alt": "NC-KOLMA / KALA CHAMPA / BIHARI PANNI SRABANI SEED FARM seed packet"
+        "alt": "NC-KOLMA SRABANI SEED FARM seed packet"
       }
     ]
   },
   {
-    "id": "gitanjali-nc-492",
-    "slug": "gitanjali-nc-492",
-    "name": "GITANJALI / NC-492",
+    "id": "kala-champa",
+    "slug": "kala-champa",
+    "name": "KALA CHAMPA",
+    "season": "Kharif",
+    "category": "OP Paddy (Kharif)",
+    "type": "OP Paddy",
+    "duration": "150-155 Days",
+    "packaging": "6 Kg, 10 Kg, 25 Kg",
+    "shortDescription": "KALA CHAMPA paddy seed for Kharif season with 150-155 Days crop maturity.",
+    "description": "KALA CHAMPA is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
+    "features": [
+      "Optimal Kharif season crop cycle (150-155 Days)",
+      "Graded physical purity with minimal chaff and weed seeds",
+      "High germination capacity and vigorous seedling emergence",
+      "Directly processed and packed by SRABANI SEED FARM, Sabang"
+    ],
+    "specifications": {
+      "season": "Kharif Season",
+      "duration": "150-155 Days",
+      "category": "OP Paddy",
+      "packaging": "6 Kg, 10 Kg, 25 Kg",
+      "origin": "Sabang, Paschim Medinipur, West Bengal"
+    },
+    "images": [
+      {
+        "src": "assets/images/products/seed_packet_8.jpeg",
+        "alt": "KALA CHAMPA SRABANI SEED FARM seed packet"
+      },
+      {
+        "src": "assets/images/products/seed_packet_4.jpeg",
+        "alt": "KALA CHAMPA SRABANI SEED FARM seed packet"
+      },
+      {
+        "src": "assets/images/products/seed_packet_1.jpeg",
+        "alt": "KALA CHAMPA SRABANI SEED FARM seed packet"
+      }
+    ]
+  },
+  {
+    "id": "bihari-panni",
+    "slug": "bihari-panni",
+    "name": "BIHARI PANNI",
+    "season": "Kharif",
+    "category": "OP Paddy (Kharif)",
+    "type": "OP Paddy",
+    "duration": "150-155 Days",
+    "packaging": "6 Kg, 10 Kg, 25 Kg",
+    "shortDescription": "BIHARI PANNI paddy seed for Kharif season with 150-155 Days crop maturity.",
+    "description": "BIHARI PANNI is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
+    "features": [
+      "Optimal Kharif season crop cycle (150-155 Days)",
+      "Graded physical purity with minimal chaff and weed seeds",
+      "High germination capacity and vigorous seedling emergence",
+      "Directly processed and packed by SRABANI SEED FARM, Sabang"
+    ],
+    "specifications": {
+      "season": "Kharif Season",
+      "duration": "150-155 Days",
+      "category": "OP Paddy",
+      "packaging": "6 Kg, 10 Kg, 25 Kg",
+      "origin": "Sabang, Paschim Medinipur, West Bengal"
+    },
+    "images": [
+      {
+        "src": "assets/images/products/seed_packet_8.jpeg",
+        "alt": "BIHARI PANNI SRABANI SEED FARM seed packet"
+      },
+      {
+        "src": "assets/images/products/seed_packet_4.jpeg",
+        "alt": "BIHARI PANNI SRABANI SEED FARM seed packet"
+      },
+      {
+        "src": "assets/images/products/seed_packet_1.jpeg",
+        "alt": "BIHARI PANNI SRABANI SEED FARM seed packet"
+      }
+    ]
+  },
+  {
+    "id": "gitanjali",
+    "slug": "gitanjali",
+    "name": "GITANJALI",
     "season": "Kharif",
     "category": "OP Paddy (Kharif)",
     "type": "OP Paddy",
     "duration": "160-165 Days",
     "packaging": "6 Kg, 10 Kg, 25 Kg",
-    "shortDescription": "GITANJALI / NC-492 paddy seed for Kharif season with 160-165 Days crop maturity.",
-    "description": "GITANJALI / NC-492 is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
+    "shortDescription": "GITANJALI paddy seed for Kharif season with 160-165 Days crop maturity.",
+    "description": "GITANJALI is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
     "features": [
       "Optimal Kharif season crop cycle (160-165 Days)",
       "Graded physical purity with minimal chaff and weed seeds",
@@ -353,29 +509,68 @@
     "images": [
       {
         "src": "assets/images/products/seed_packet_5.jpeg",
-        "alt": "GITANJALI / NC-492 SRABANI SEED FARM seed packet"
+        "alt": "GITANJALI SRABANI SEED FARM seed packet"
       },
       {
         "src": "assets/images/products/seed_packet_2.jpeg",
-        "alt": "GITANJALI / NC-492 SRABANI SEED FARM seed packet"
+        "alt": "GITANJALI SRABANI SEED FARM seed packet"
       },
       {
         "src": "assets/images/products/seed_packet_4.jpeg",
-        "alt": "GITANJALI / NC-492 SRABANI SEED FARM seed packet"
+        "alt": "GITANJALI SRABANI SEED FARM seed packet"
       }
     ]
   },
   {
-    "id": "mtu-1156-mtu-1153",
-    "slug": "mtu-1156-mtu-1153",
-    "name": "MTU-1156 / MTU-1153",
+    "id": "nc-492",
+    "slug": "nc-492",
+    "name": "NC-492",
+    "season": "Kharif",
+    "category": "OP Paddy (Kharif)",
+    "type": "OP Paddy",
+    "duration": "160-165 Days",
+    "packaging": "6 Kg, 10 Kg, 25 Kg",
+    "shortDescription": "NC-492 paddy seed for Kharif season with 160-165 Days crop maturity.",
+    "description": "NC-492 is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
+    "features": [
+      "Optimal Kharif season crop cycle (160-165 Days)",
+      "Graded physical purity with minimal chaff and weed seeds",
+      "High germination capacity and vigorous seedling emergence",
+      "Directly processed and packed by SRABANI SEED FARM, Sabang"
+    ],
+    "specifications": {
+      "season": "Kharif Season",
+      "duration": "160-165 Days",
+      "category": "OP Paddy",
+      "packaging": "6 Kg, 10 Kg, 25 Kg",
+      "origin": "Sabang, Paschim Medinipur, West Bengal"
+    },
+    "images": [
+      {
+        "src": "assets/images/products/seed_packet_5.jpeg",
+        "alt": "NC-492 SRABANI SEED FARM seed packet"
+      },
+      {
+        "src": "assets/images/products/seed_packet_2.jpeg",
+        "alt": "NC-492 SRABANI SEED FARM seed packet"
+      },
+      {
+        "src": "assets/images/products/seed_packet_4.jpeg",
+        "alt": "NC-492 SRABANI SEED FARM seed packet"
+      }
+    ]
+  },
+  {
+    "id": "mtu-1156",
+    "slug": "mtu-1156",
+    "name": "MTU-1156",
     "season": "Kharif",
     "category": "OP Paddy (Kharif)",
     "type": "OP Paddy",
     "duration": "115-120 Days",
     "packaging": "6 Kg, 10 Kg, 25 Kg",
-    "shortDescription": "MTU-1156 / MTU-1153 paddy seed for Kharif season with 115-120 Days crop maturity.",
-    "description": "MTU-1156 / MTU-1153 is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
+    "shortDescription": "MTU-1156 paddy seed for Kharif season with 115-120 Days crop maturity.",
+    "description": "MTU-1156 is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
     "features": [
       "Optimal Kharif season crop cycle (115-120 Days)",
       "Graded physical purity with minimal chaff and weed seeds",
@@ -392,29 +587,68 @@
     "images": [
       {
         "src": "assets/images/products/seed_packet_9.jpeg",
-        "alt": "MTU-1156 / MTU-1153 SRABANI SEED FARM seed packet"
+        "alt": "MTU-1156 SRABANI SEED FARM seed packet"
       },
       {
         "src": "assets/images/products/seed_packet_3.jpeg",
-        "alt": "MTU-1156 / MTU-1153 SRABANI SEED FARM seed packet"
+        "alt": "MTU-1156 SRABANI SEED FARM seed packet"
       },
       {
         "src": "assets/images/products/seed_packet_1.jpeg",
-        "alt": "MTU-1156 / MTU-1153 SRABANI SEED FARM seed packet"
+        "alt": "MTU-1156 SRABANI SEED FARM seed packet"
       }
     ]
   },
   {
-    "id": "lalat-ir-64",
-    "slug": "lalat-ir-64",
-    "name": "LALAT / IR-64",
+    "id": "mtu-1153",
+    "slug": "mtu-1153",
+    "name": "MTU-1153",
+    "season": "Kharif",
+    "category": "OP Paddy (Kharif)",
+    "type": "OP Paddy",
+    "duration": "115-120 Days",
+    "packaging": "6 Kg, 10 Kg, 25 Kg",
+    "shortDescription": "MTU-1153 paddy seed for Kharif season with 115-120 Days crop maturity.",
+    "description": "MTU-1153 is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
+    "features": [
+      "Optimal Kharif season crop cycle (115-120 Days)",
+      "Graded physical purity with minimal chaff and weed seeds",
+      "High germination capacity and vigorous seedling emergence",
+      "Directly processed and packed by SRABANI SEED FARM, Sabang"
+    ],
+    "specifications": {
+      "season": "Kharif Season",
+      "duration": "115-120 Days",
+      "category": "OP Paddy",
+      "packaging": "6 Kg, 10 Kg, 25 Kg",
+      "origin": "Sabang, Paschim Medinipur, West Bengal"
+    },
+    "images": [
+      {
+        "src": "assets/images/products/seed_packet_9.jpeg",
+        "alt": "MTU-1153 SRABANI SEED FARM seed packet"
+      },
+      {
+        "src": "assets/images/products/seed_packet_3.jpeg",
+        "alt": "MTU-1153 SRABANI SEED FARM seed packet"
+      },
+      {
+        "src": "assets/images/products/seed_packet_1.jpeg",
+        "alt": "MTU-1153 SRABANI SEED FARM seed packet"
+      }
+    ]
+  },
+  {
+    "id": "lalat",
+    "slug": "lalat",
+    "name": "LALAT",
     "season": "Kharif",
     "category": "OP Paddy (Kharif)",
     "type": "OP Paddy",
     "duration": "120-125 Days",
     "packaging": "6 Kg, 10 Kg, 25 Kg",
-    "shortDescription": "LALAT / IR-64 paddy seed for Kharif season with 120-125 Days crop maturity.",
-    "description": "LALAT / IR-64 is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
+    "shortDescription": "LALAT paddy seed for Kharif season with 120-125 Days crop maturity.",
+    "description": "LALAT is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
     "features": [
       "Optimal Kharif season crop cycle (120-125 Days)",
       "Graded physical purity with minimal chaff and weed seeds",
@@ -431,15 +665,54 @@
     "images": [
       {
         "src": "assets/images/products/seed_packet_6.jpeg",
-        "alt": "LALAT / IR-64 SRABANI SEED FARM seed packet"
+        "alt": "LALAT SRABANI SEED FARM seed packet"
       },
       {
         "src": "assets/images/products/seed_packet_4.jpeg",
-        "alt": "LALAT / IR-64 SRABANI SEED FARM seed packet"
+        "alt": "LALAT SRABANI SEED FARM seed packet"
       },
       {
         "src": "assets/images/products/seed_packet_5.jpeg",
-        "alt": "LALAT / IR-64 SRABANI SEED FARM seed packet"
+        "alt": "LALAT SRABANI SEED FARM seed packet"
+      }
+    ]
+  },
+  {
+    "id": "ir-64",
+    "slug": "ir-64",
+    "name": "IR-64",
+    "season": "Kharif",
+    "category": "OP Paddy (Kharif)",
+    "type": "OP Paddy",
+    "duration": "120-125 Days",
+    "packaging": "6 Kg, 10 Kg, 25 Kg",
+    "shortDescription": "IR-64 paddy seed for Kharif season with 120-125 Days crop maturity.",
+    "description": "IR-64 is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
+    "features": [
+      "Optimal Kharif season crop cycle (120-125 Days)",
+      "Graded physical purity with minimal chaff and weed seeds",
+      "High germination capacity and vigorous seedling emergence",
+      "Directly processed and packed by SRABANI SEED FARM, Sabang"
+    ],
+    "specifications": {
+      "season": "Kharif Season",
+      "duration": "120-125 Days",
+      "category": "OP Paddy",
+      "packaging": "6 Kg, 10 Kg, 25 Kg",
+      "origin": "Sabang, Paschim Medinipur, West Bengal"
+    },
+    "images": [
+      {
+        "src": "assets/images/products/seed_packet_6.jpeg",
+        "alt": "IR-64 SRABANI SEED FARM seed packet"
+      },
+      {
+        "src": "assets/images/products/seed_packet_4.jpeg",
+        "alt": "IR-64 SRABANI SEED FARM seed packet"
+      },
+      {
+        "src": "assets/images/products/seed_packet_5.jpeg",
+        "alt": "IR-64 SRABANI SEED FARM seed packet"
       }
     ]
   },
@@ -561,16 +834,16 @@
     ]
   },
   {
-    "id": "super-sankar-shymashree",
-    "slug": "super-sankar-shymashree",
-    "name": "SUPER SANKAR / SHYMASHREE",
+    "id": "super-sankar",
+    "slug": "super-sankar",
+    "name": "SUPER SANKAR",
     "season": "Kharif",
     "category": "OP Paddy (Kharif)",
     "type": "OP Paddy",
     "duration": "110-115 Days",
     "packaging": "6 Kg, 10 Kg, 25 Kg",
-    "shortDescription": "SUPER SANKAR / SHYMASHREE paddy seed for Kharif season with 110-115 Days crop maturity.",
-    "description": "SUPER SANKAR / SHYMASHREE is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
+    "shortDescription": "SUPER SANKAR paddy seed for Kharif season with 110-115 Days crop maturity.",
+    "description": "SUPER SANKAR is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
     "features": [
       "Optimal Kharif season crop cycle (110-115 Days)",
       "Graded physical purity with minimal chaff and weed seeds",
@@ -587,29 +860,29 @@
     "images": [
       {
         "src": "assets/images/products/seed_packet_7.jpeg",
-        "alt": "SUPER SANKAR / SHYMASHREE SRABANI SEED FARM seed packet"
+        "alt": "SUPER SANKAR SRABANI SEED FARM seed packet"
       },
       {
         "src": "assets/images/products/seed_packet_2.jpeg",
-        "alt": "SUPER SANKAR / SHYMASHREE SRABANI SEED FARM seed packet"
+        "alt": "SUPER SANKAR SRABANI SEED FARM seed packet"
       },
       {
         "src": "assets/images/products/seed_packet_5.jpeg",
-        "alt": "SUPER SANKAR / SHYMASHREE SRABANI SEED FARM seed packet"
+        "alt": "SUPER SANKAR SRABANI SEED FARM seed packet"
       }
     ]
   },
   {
-    "id": "iet-4786-deradun",
-    "slug": "iet-4786-deradun",
-    "name": "IET-4786 / DERADUN",
+    "id": "shymashree",
+    "slug": "shymashree",
+    "name": "SHYMASHREE",
     "season": "Kharif",
     "category": "OP Paddy (Kharif)",
     "type": "OP Paddy",
     "duration": "110-115 Days",
     "packaging": "6 Kg, 10 Kg, 25 Kg",
-    "shortDescription": "IET-4786 / DERADUN paddy seed for Kharif season with 110-115 Days crop maturity.",
-    "description": "IET-4786 / DERADUN is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
+    "shortDescription": "SHYMASHREE paddy seed for Kharif season with 110-115 Days crop maturity.",
+    "description": "SHYMASHREE is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
     "features": [
       "Optimal Kharif season crop cycle (110-115 Days)",
       "Graded physical purity with minimal chaff and weed seeds",
@@ -626,15 +899,93 @@
     "images": [
       {
         "src": "assets/images/products/seed_packet_7.jpeg",
-        "alt": "IET-4786 / DERADUN SRABANI SEED FARM seed packet"
-      },
-      {
-        "src": "assets/images/products/seed_packet_8.jpeg",
-        "alt": "IET-4786 / DERADUN SRABANI SEED FARM seed packet"
+        "alt": "SHYMASHREE SRABANI SEED FARM seed packet"
       },
       {
         "src": "assets/images/products/seed_packet_2.jpeg",
-        "alt": "IET-4786 / DERADUN SRABANI SEED FARM seed packet"
+        "alt": "SHYMASHREE SRABANI SEED FARM seed packet"
+      },
+      {
+        "src": "assets/images/products/seed_packet_5.jpeg",
+        "alt": "SHYMASHREE SRABANI SEED FARM seed packet"
+      }
+    ]
+  },
+  {
+    "id": "iet-4786",
+    "slug": "iet-4786",
+    "name": "IET-4786",
+    "season": "Kharif",
+    "category": "OP Paddy (Kharif)",
+    "type": "OP Paddy",
+    "duration": "110-115 Days",
+    "packaging": "6 Kg, 10 Kg, 25 Kg",
+    "shortDescription": "IET-4786 paddy seed for Kharif season with 110-115 Days crop maturity.",
+    "description": "IET-4786 is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
+    "features": [
+      "Optimal Kharif season crop cycle (110-115 Days)",
+      "Graded physical purity with minimal chaff and weed seeds",
+      "High germination capacity and vigorous seedling emergence",
+      "Directly processed and packed by SRABANI SEED FARM, Sabang"
+    ],
+    "specifications": {
+      "season": "Kharif Season",
+      "duration": "110-115 Days",
+      "category": "OP Paddy",
+      "packaging": "6 Kg, 10 Kg, 25 Kg",
+      "origin": "Sabang, Paschim Medinipur, West Bengal"
+    },
+    "images": [
+      {
+        "src": "assets/images/products/seed_packet_7.jpeg",
+        "alt": "IET-4786 SRABANI SEED FARM seed packet"
+      },
+      {
+        "src": "assets/images/products/seed_packet_8.jpeg",
+        "alt": "IET-4786 SRABANI SEED FARM seed packet"
+      },
+      {
+        "src": "assets/images/products/seed_packet_2.jpeg",
+        "alt": "IET-4786 SRABANI SEED FARM seed packet"
+      }
+    ]
+  },
+  {
+    "id": "deradun",
+    "slug": "deradun",
+    "name": "DERADUN",
+    "season": "Kharif",
+    "category": "OP Paddy (Kharif)",
+    "type": "OP Paddy",
+    "duration": "110-115 Days",
+    "packaging": "6 Kg, 10 Kg, 25 Kg",
+    "shortDescription": "DERADUN paddy seed for Kharif season with 110-115 Days crop maturity.",
+    "description": "DERADUN is a proven paddy seed variety processed under strict germination and moisture standards at SRABANI SEED FARM in Sabang, West Bengal. Thoroughly graded for uniform density and dependable crop stand in Kharif cultivation.",
+    "features": [
+      "Optimal Kharif season crop cycle (110-115 Days)",
+      "Graded physical purity with minimal chaff and weed seeds",
+      "High germination capacity and vigorous seedling emergence",
+      "Directly processed and packed by SRABANI SEED FARM, Sabang"
+    ],
+    "specifications": {
+      "season": "Kharif Season",
+      "duration": "110-115 Days",
+      "category": "OP Paddy",
+      "packaging": "6 Kg, 10 Kg, 25 Kg",
+      "origin": "Sabang, Paschim Medinipur, West Bengal"
+    },
+    "images": [
+      {
+        "src": "assets/images/products/seed_packet_7.jpeg",
+        "alt": "DERADUN SRABANI SEED FARM seed packet"
+      },
+      {
+        "src": "assets/images/products/seed_packet_8.jpeg",
+        "alt": "DERADUN SRABANI SEED FARM seed packet"
+      },
+      {
+        "src": "assets/images/products/seed_packet_2.jpeg",
+        "alt": "DERADUN SRABANI SEED FARM seed packet"
       }
     ]
   },

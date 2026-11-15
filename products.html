@@ -219,13 +219,33 @@
         </div>
       </div>
 
-      <!-- Season & Category Filter Buttons -->
-      <div class="catalog-filter-bar" role="tablist" aria-label="Filter seed varieties by season or category">
-        <button type="button" class="filter-btn active" data-filter="all">All Varieties (65)</button>
-        <button type="button" class="filter-btn" data-filter="kharif">🌾 Kharif Season (40)</button>
-        <button type="button" class="filter-btn" data-filter="boro">☀️ Boro Season (25)</button>
-        <button type="button" class="filter-btn" data-filter="op">OP Paddy</button>
-        <button type="button" class="filter-btn" data-filter="improved">Improved Paddy</button>
+      <!-- Season & Type Dual Filter Controls -->
+      <div class="catalog-filters-wrap" aria-label="Catalog filters">
+        <!-- Season Filter: Kharif or Boro -->
+        <div class="filter-group">
+          <span class="filter-group-title">
+            <svg class="filter-group-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Season:
+          </span>
+          <div class="filter-btn-group" role="radiogroup" aria-label="Filter by crop season">
+            <button type="button" class="filter-btn active" data-group="season" data-value="kharif" role="radio" aria-checked="true">🌾 Kharif Season</button>
+            <button type="button" class="filter-btn" data-group="season" data-value="boro" role="radio" aria-checked="false">☀️ Boro Season</button>
+          </div>
+        </div>
+
+        <div class="filter-group-divider" aria-hidden="true"></div>
+
+        <!-- Variety Type Filter: OP or Improved -->
+        <div class="filter-group">
+          <span class="filter-group-title">
+            <svg class="filter-group-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            Variety Type:
+          </span>
+          <div class="filter-btn-group" role="radiogroup" aria-label="Filter by variety type">
+            <button type="button" class="filter-btn active" data-group="type" data-value="op" role="radio" aria-checked="true">OP Paddy</button>
+            <button type="button" class="filter-btn" data-group="type" data-value="improved" role="radio" aria-checked="false">Improved Paddy</button>
+          </div>
+        </div>
       </div>
 
       <!-- Products Grid (Dynamically rendered from data/products.json via assets/js/products.js) -->
