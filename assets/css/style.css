@@ -531,6 +531,17 @@ p:last-child {
   white-space: nowrap;
 }
 
+.brand-cert {
+  font-family: var(--font-sans);
+  font-size: clamp(0.5rem, 1.6vw, 0.62rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--primary-green);
+  letter-spacing: 0.04em;
+  margin-top: 1px;
+  white-space: nowrap;
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
