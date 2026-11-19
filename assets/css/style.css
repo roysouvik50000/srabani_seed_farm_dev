@@ -506,18 +506,29 @@ p:last-child {
 
 .brand-title {
   font-family: var(--font-heading);
-  font-size: clamp(0.92rem, 3.4vw + 0.1rem, 1.25rem);
-  font-weight: 800;
+  font-size: clamp(0.95rem, 3.4vw + 0.1rem, 1.28rem);
+  font-weight: 850;
+  font-style: italic;
   line-height: 1.15;
-  color: var(--dark-text);
-  letter-spacing: 0.02em;
+  color: #14532D;
+  background: linear-gradient(135deg, #0F172A 15%, #14532D 65%, #15803D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.035em;
   text-transform: uppercase;
-  transition: color var(--transition-fast);
+  transition: all var(--transition-fast);
   white-space: nowrap;
+  display: inline-block;
+  filter: drop-shadow(0 1px 1px rgba(15, 23, 42, 0.06));
 }
 
 .brand-link:hover .brand-title {
-  color: var(--primary-green);
+  background: linear-gradient(135deg, #15803D 0%, #16A34A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 2px 4px rgba(21, 128, 61, 0.15));
 }
 
 .brand-tagline {
