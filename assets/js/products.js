@@ -233,8 +233,8 @@
                   ✉ Inquire Online
                 </a>
               </div>
-              <a href="tel:+919932442449" class="btn btn-sm btn-golden btn-block">
-                📞 Call Sabang Farm (+91 99324 42449)
+              <a href="tel:+918348456914" class="btn btn-sm btn-golden btn-block">
+                📞 Call SSF (+91 83484 56914)
               </a>
             </div>
 

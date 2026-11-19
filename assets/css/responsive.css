@@ -19,6 +19,10 @@
     font-size: 0.68rem;
   }
 
+  .brand-cert {
+    font-size: 0.58rem;
+  }
+
   .hero-title {
     font-size: 2.6rem;
   }
@@ -586,6 +590,10 @@
     font-size: 0.62rem;
   }
 
+  .brand-cert {
+    font-size: 0.52rem;
+  }
+
   .mobile-call-pill {
     padding: 5px 10px;
     font-size: 0.78rem;
@@ -671,6 +679,10 @@
 
   .brand-tagline {
     font-size: 0.54rem;
+  }
+
+  .brand-cert {
+    font-size: 0.46rem;
   }
 
   .mobile-call-pill span {
