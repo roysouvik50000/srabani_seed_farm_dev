@@ -33,26 +33,6 @@
       "brand": {
         "@type": "Brand",
         "name": "SRABANI SEED FARM"
-      },
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "INR",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition",
-        "seller": {
-          "@type": "LocalBusiness",
-          "name": "SRABANI SEED FARM",
-          "telephone": ["+919932442449", "+918348456914"],
-          "sameAs": ["https://www.facebook.com/share/1JAVYuC28b/"],
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Sabang - Moharh Rd, Sindurmuri",
-            "addressLocality": "Sabang",
-            "addressRegion": "West Bengal",
-            "postalCode": "721144",
-            "addressCountry": "IN"
-          }
-        }
       }
     };
 

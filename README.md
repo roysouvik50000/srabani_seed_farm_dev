@@ -148,22 +148,14 @@ Edit `data/products.json`. Each product follows this standard JSON structure:
 
 ---
 
-## 🚀 6. Deployment Guide
+## 🚀 6. Deployment Guide (Cloudflare Workers Static Assets)
 
-### Netlify
-1. Simply drag-and-drop the project folder to the Netlify Drop dashboard, or connect via GitHub repository.
-2. Build command: None required (static).
-3. Publish directory: `.` (root).
-4. To enable contact form processing via Netlify Forms, add `data-netlify="true"` to `<form id="contactForm">` in `contact.html`.
-
-### GitHub Pages
-1. Push the repository to GitHub.
-2. Go to **Settings** > **Pages**.
-3. Choose the branch `main` and root directory `/`.
-4. Click **Save**.
-
-### Traditional Web Hosting (cPanel / Apache / Nginx)
-Upload all files and directories into `public_html/`. The site requires no Node.js, PHP, or database.
+The website is configured for deployment with **Cloudflare Workers Static Assets**:
+- `serve_directly: true`
+- `raw_run_worker_first: false`
+- Both apex (`srabaniseedfarm.com`) and `www.srabaniseedfarm.com` connected through Worker Custom Domains.
+- Useful path-based redirects (e.g. `/index.html` → `/`) are specified in `_redirects`.
+- Hostname (www to non-www) and HTTP to HTTPS redirects are managed at the Cloudflare zone level via Single Redirects.
 
 ---
 

@@ -1,0 +1,6 @@
+# Cloudflare Workers Static Assets - Path-based redirects
+# Format: [source] [destination] [code]
+
+/index.html                           /                  301
+/product-details.html                 /products.html     301
+/Paddy-Seeds-Company-Overview.html    /about.html        301

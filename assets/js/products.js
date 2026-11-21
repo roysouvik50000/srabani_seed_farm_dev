@@ -342,11 +342,17 @@
 
   // Handle URL hash or search parameter navigation (e.g. products.html#gobinda-bhog)
   function handleUrlTarget() {
-    const hash = window.location.hash.replace('#', '').trim();
+    let hash = window.location.hash.replace('#', '').trim();
     const urlParams = new URLSearchParams(window.location.search);
-    const targetSlug = hash || urlParams.get('slug') || urlParams.get('product');
+    let targetSlug = hash || urlParams.get('slug') || urlParams.get('product');
 
-    if (!targetSlug) return;
+    // Skip season filter hashes which are handled by initProducts filter logic
+    if (!targetSlug || targetSlug === 'kharif' || targetSlug === 'boro') return;
+
+    // Support legacy/composite slug aliases
+    if (targetSlug === 'mtu-7029-nilanjana-dhanaraj') {
+      targetSlug = 'mtu-7029';
+    }
 
     const card = document.querySelector(`.product-card[data-slug="${targetSlug}"]`);
     if (card) {
@@ -388,8 +394,12 @@
 
     // 1. Featured Grid on Home Page
     if (featuredGrid) {
-      const featuredItems = products.slice(0, 3);
-      featuredGrid.innerHTML = featuredItems.map(p => createFeaturedCardHtml(p)).join('');
+      const featuredSlugs = ['mtu-7029', 'gobinda-bhog', 'shyamashree-boro'];
+      const featuredItems = featuredSlugs
+        .map(slug => products.find(p => p.slug === slug))
+        .filter(Boolean);
+      const itemsToRender = featuredItems.length === 3 ? featuredItems : products.slice(0, 3);
+      featuredGrid.innerHTML = itemsToRender.map(p => createFeaturedCardHtml(p)).join('');
     }
 
     // 2. Full Catalog Grid on Products Page
@@ -409,13 +419,20 @@
       const targetSlug = hash || urlParams.get('slug') || urlParams.get('product');
 
       if (targetSlug) {
-        const targetProduct = products.find(p => p.slug === targetSlug || p.id === targetSlug);
-        if (targetProduct) {
-          if (targetProduct.season) {
-            currentSeason = targetProduct.season.toLowerCase();
-          }
-          if (targetProduct.type) {
-            currentType = targetProduct.type.toLowerCase().includes('improved') ? 'improved' : 'op';
+        const lowerSlug = targetSlug.toLowerCase();
+        if (lowerSlug === 'kharif' || lowerSlug === 'boro') {
+          currentSeason = lowerSlug;
+        } else {
+          let lookupSlug = lowerSlug;
+          if (lookupSlug === 'mtu-7029-nilanjana-dhanaraj') lookupSlug = 'mtu-7029';
+          const targetProduct = products.find(p => p.slug === lookupSlug || p.id === lookupSlug);
+          if (targetProduct) {
+            if (targetProduct.season) {
+              currentSeason = targetProduct.season.toLowerCase();
+            }
+            if (targetProduct.type) {
+              currentType = targetProduct.type.toLowerCase().includes('improved') ? 'improved' : 'op';
+            }
           }
         }
       } else {
@@ -523,8 +540,14 @@
       // Handle deep links (hash navigation)
       handleUrlTarget();
       window.addEventListener('hashchange', function () {
-        const newHash = window.location.hash.replace('#', '').trim();
+        let newHash = window.location.hash.replace('#', '').trim().toLowerCase();
         if (newHash) {
+          if (newHash === 'kharif' || newHash === 'boro') {
+            currentSeason = newHash;
+            applyFilters();
+            return;
+          }
+          if (newHash === 'mtu-7029-nilanjana-dhanaraj') newHash = 'mtu-7029';
           const targetProduct = products.find(p => p.slug === newHash || p.id === newHash);
           if (targetProduct) {
             if (targetProduct.season) currentSeason = targetProduct.season.toLowerCase();
